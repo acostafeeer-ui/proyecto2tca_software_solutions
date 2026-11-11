@@ -98,8 +98,11 @@ FAMILIAR = ["madre", "padre", "mamá", "papá", "hermano", "hermana", "abuelo", 
 PSEUDO_NEGACION = ["sin embargo", "sin cambios", "no solo", "sin otro"]
 
 # Presupuesto de contexto para el LLM
-MAX_NOTAS_LLM = 10
-MAX_CHARS_NOTA = 1200
+MAX_NOTAS_LLM = 5         # notas de texto libre más recientes
+MAX_CHARS_NOTA = 600      # caracteres por nota
+MAX_MEDS_LLM = 20         # medicamentos más recientes
+MAX_ATENCIONES_LLM = 10   # atenciones más recientes
+MAX_ESTUDIOS_LLM = 8      # estudios más recientes
 
 # Problemas crónicos: prefijos CIE-10 (se comparan sin puntos ni espacios, en mayúsculas)
 CIE10_CRONICOS = [

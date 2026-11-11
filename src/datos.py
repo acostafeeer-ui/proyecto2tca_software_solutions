@@ -39,7 +39,9 @@ def registros_paciente(expediente: str, con=None) -> dict:
         c_exp = _col(con, real, "Expediente")
         if not c_exp:
             continue
-        df = con.execute(f'SELECT * FROM "{real}" WHERE TRIM(CAST("{c_exp}" AS VARCHAR)) = ?', [str(expediente).strip()]).df()
+        # se compara sin ceros a la izquierda: "00000000000010269632" y "10269632" son el mismo expediente
+        df = con.execute(f'SELECT * FROM "{real}" WHERE LTRIM(TRIM(CAST("{c_exp}" AS VARCHAR)), \'0\') = LTRIM(?, \'0\')',
+                         [str(expediente).strip()]).df()
         out[t] = df
         c_ing = _col(con, real, "ClaveIngreso")
         if c_ing and len(df):

@@ -54,7 +54,8 @@ def verificar_frase(texto, refs, indice, expediente, calculada=False):
     if faltan:
         return "eliminada", "", f"cita hechos inexistentes {faltan} (comprobación 2)"
     citados = [indice[r] for r in refs]
-    ajenos = [h["id"] for h in citados if str(h["expediente"]).strip() != str(expediente).strip()]
+    mismo = lambda a, b: str(a).strip().lstrip("0") == str(b).strip().lstrip("0")
+    ajenos = [h["id"] for h in citados if not mismo(h["expediente"], expediente)]
     if ajenos:
         return "eliminada", "", f"INCIDENTE: cita hechos de otro paciente {ajenos} (comprobación 3)"
     if calculada:

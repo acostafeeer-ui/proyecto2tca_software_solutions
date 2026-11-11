@@ -62,8 +62,11 @@ def iny_sangre(reg):
     df = _primera(reg, "historiaclinica")
     if df is None:
         return False
-    nueva = df.iloc[[-1]].copy()
-    actual = str(_get(df, -1, "TipoSangre") or "")
+    validas = [i for i in range(len(df)) if str(_get(df, i, "TipoSangre") or "").strip().upper() in ("O", "A", "B", "AB")]
+    if not validas:
+        return False  # sin tipo de sangre conocido no puede haber contradicción
+    nueva = df.iloc[[validas[-1]]].copy()
+    actual = str(_get(df, validas[-1], "TipoSangre") or "").strip().upper()
     _set(nueva, 0, "TipoSangre", "AB" if actual != "AB" else "O")
     _set(nueva, 0, "RH", "-" if str(_get(df, -1, "RH") or "+") != "-" else "+")
     _set(nueva, 0, "Indice", "INY1")
@@ -85,9 +88,15 @@ def iny_dosis(reg):
     df = _primera(reg, "Indicaciones")
     if df is None:
         return False
-    _set(df, 0, "Dosis", None)
-    _set(df, 0, "Status", "ACTIVA")
-    return True
+    import re as _re
+    for i in range(len(df)):
+        tipo = str(_get(df, i, "Tipo") or "").strip().upper()
+        nombre = str(_get(df, i, "Descart") or _get(df, i, "Articulo") or "")
+        if tipo in ("M", "MEDICAMENTO") and _re.search(r"\d", nombre):
+            _set(df, i, "Dosis", None)
+            _set(df, i, "Status", "P")
+            return True
+    return False
 
 
 def iny_signo(reg):

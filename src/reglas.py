@@ -2,6 +2,7 @@
 
 Cada alerta: regla, severidad (alta/media/info), mensaje, hechos (IDs), pregunta sugerida.
 """
+import re
 from collections import defaultdict
 from datetime import datetime
 
@@ -52,6 +53,8 @@ def evaluar(hechos):
 
     # F03 medicamento sin dosis, vía o frecuencia
     incompletos = [m for m in meds if m["detalle"].get("estatus", "").lower()[:4] not in ("susp", "canc")
+                   and m["detalle"].get("origen") != "solución intravenosa"
+                   and re.search(r"\d", m["valor"])  # solo medicamentos con concentración; excluye "REPOSO", "AGUA"...
                    and (not m["detalle"].get("dosis") or not m["detalle"].get("via") or not m["detalle"].get("frecuencia"))]
     if incompletos:
         nombres = ", ".join(sorted({m["valor"] for m in incompletos})[:4])
@@ -87,11 +90,13 @@ def evaluar(hechos):
     nac = []
     for h in por_tipo["demografico"]:
         if h["detalle"].get("campo") == "edad" and h["fecha"]:
-            try:
-                edad = float(normalizar(h["valor"]).split()[0])
-                nac.append((int(h["fecha"][:4]) - edad, h))
-            except (ValueError, IndexError):
-                pass
+            edad = h["detalle"].get("anios")
+            if edad is None:
+                try:
+                    edad = float(normalizar(h["valor"]).split()[0])
+                except (ValueError, IndexError):
+                    continue
+            nac.append((int(h["fecha"][:4]) - edad, h))
     if len(nac) > 1:
         lo, hi = min(nac, key=lambda x: x[0]), max(nac, key=lambda x: x[0])
         if hi[0] - lo[0] > 2:
@@ -158,13 +163,14 @@ def evaluar(hechos):
     # D01 duplicidad terapéutica: mismo principio activo, mismo día, registros distintos
     por_dia = defaultdict(list)
     for m in meds:
-        if m["fecha"] and m["detalle"].get("estatus", "").lower()[:4] not in ("susp", "canc"):
+        if m["fecha"] and m["detalle"].get("estatus", "").lower()[:4] not in ("susp", "canc") \
+                and m["detalle"].get("origen") != "solución intravenosa":
             principio = normalizar(m["valor"]).split(" ")[0]
             por_dia[(principio, m["fecha"])].append(m)
     for (principio, dia), grupo in por_dia.items():
         variantes = {(normalizar(g["detalle"].get("dosis", "")), normalizar(g["detalle"].get("via", ""))) for g in grupo}
         if len(grupo) > 1 and len(variantes) > 1:
-            A.append(_alerta("D01", "alta", f"Posible duplicidad terapéutica: {principio} indicado {len(grupo)} veces el {dia} con distinta dosis o vía.",
+            A.append(_alerta("D01", "media", f"Posible duplicidad terapéutica: {principio} indicado {len(grupo)} veces el {dia} con distinta dosis o vía.",
                              grupo, f"Confirmar cuál indicación de {principio} está vigente."))
 
     A.sort(key=lambda a: ORDEN[a["severidad"]])

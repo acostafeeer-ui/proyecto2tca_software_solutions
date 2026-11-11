@@ -16,6 +16,86 @@ NO = {"no", "n", "negado", "negada", "negados", "negadas", "niega", "ninguna", "
 SI = {"si", "s", "1", "positivo", "true", "x"}
 SOSPECHA = ["probable", "sospecha", "a descartar", "posible", "en estudio", "descartar"]
 
+# Campos de texto libre adicionales que trae el conjunto real de TCA
+TEXTO_EXTRA = {"historiaclinica": ["PP_Observaciones", "HF_Observaciones", "CirugiasPrevias", "EstudiosLabyGab", "estudiosprevios"]}
+OBSERVACIONES = {"pp_observaciones", "hf_observaciones"}
+
+# Etiquetas legibles de las banderas S/N de historiaclinica
+ETIQ_PP = {"quirurgico": "Antecedentes quirúrgicos", "transfusionales": "Antecedentes transfusionales",
+           "endocrinas": "Enfermedades endocrinas", "hipertension": "Hipertensión arterial", "tumores": "Tumores",
+           "diabetes": "Diabetes", "enfcongenitaspp": "Enfermedades congénitas", "enfcorazon": "Enfermedad del corazón",
+           "enfhigado": "Enfermedad hepática", "enfriñon": "Enfermedad renal", "enfinfancia": "Enfermedades de la infancia",
+           "traumaticos": "Antecedentes traumáticos", "otros": "Otros antecedentes personales"}
+ETIQ_HF = {"diabeticos": "Diabetes", "hipertensivos": "Hipertensión", "oncologicos": "Cáncer",
+           "enfcongenitas": "Enfermedades congénitas", "cardiologicos": "Cardiopatía", "nefropaticos": "Nefropatía",
+           "otros": "Otros antecedentes familiares"}
+
+# Códigos de hábitos del conjunto real (N/S/E/O)
+HABITOS = {
+    "fumador": {"n": ("Tabaquismo: niega", "negado"), "s": ("Tabaquismo: sí", "afirmado"), "e": ("Exfumador", "afirmado")},
+    "alcohol": {"n": ("Consumo de alcohol: niega", "negado"), "s": ("Consumo de alcohol: sí", "afirmado"),
+                "o": ("Consumo de alcohol: ocasional", "afirmado"), "e": ("Exconsumo de alcohol", "afirmado")},
+    "sustancias": {"n": ("Consumo de sustancias: niega", "negado"), "s": ("Consumo de sustancias: sí", "afirmado"),
+                   "e": ("Exconsumo de sustancias", "afirmado")},
+}
+SANGRE_NULA = {"se desconoce", "desconoce", "rh", "nd", "n/d", "desconocido", "no sabe"}
+
+RX_ALERGIA = re.compile(r"\balergi(?:a|as)\b(?:\s+medicamentosas?)?\s*(?:a\s+|:|-|=)?\s*([^,;.\n]{0,80})", re.I)
+RX_ALERGICO = re.compile(r"\bal[eé]rgic[oa]s?\s+a\s+([^,;.\n]{1,60})", re.I)
+RX_ETIQUETA = re.compile(r"\s[A-Za-zÁÉÍÓÚÑáéíóúñ]{2,}\s*:")
+NEG_ALERGIA = ("negad", "niega", "ninguna", "ninguno", "sin ", "neg.", "(-)", "no ", "no,", "nada")
+
+
+UNIDADES = {"hra": "horas", "hrs.": "horas", "hrs": "horas", "min": "minutos", "dia": "días", "día": "días",
+            "sem.": "semanas", "mes": "meses"}
+DIAG_NULO = {"no-def", "nodef", "no def", "0", "na"}
+
+
+def unidad(u: str) -> str:
+    return UNIDADES.get(normalizar(u), u)
+
+
+def alergias_en_texto(t: str):
+    """Extrae menciones de alergia de un texto: [(valor, certeza, fragmento)].
+
+    Maneja los formatos reales de las notas: "ALERGIAS : NEGADAS", "alergias:-", "niega alergias",
+    "alergia a penicilina", "ALERGIAS: PENICILINA QX: ..." (corta en la siguiente etiqueta).
+    """
+    out = []
+    for m in RX_ALERGIA.finditer(t):
+        crudo = m.group(1)
+        corte = RX_ETIQUETA.search(" " + crudo)
+        valor = (crudo[: corte.start()] if corte else crudo).strip(" -:=")
+        previo = normalizar(t[max(0, m.start() - 30): m.start()])
+        v = normalizar(valor)
+        frag = t[max(0, m.start() - 15): m.end()].strip()
+        if v.startswith(("no especificad", "aguda", "cutanea", "estacional")) or "desconoc" in v:
+            continue
+        cerca = previo[-22:]
+        neg_previa = any(x in cerca for x in ("niega", "negad", "no refiere", "no se refiere", "sin ", "no ", "ningun", "descart"))
+        if not v or neg_previa or any(v.startswith(n.strip()) or n in f" {v} " for n in NEG_ALERGIA):
+            out.append(("Niega alergias", "negado", frag))
+        else:
+            out.append((f"Alergia: {valor}", "afirmado", frag))
+    for m in RX_ALERGICO.finditer(t):
+        out.append((f"Alergia: {m.group(1).strip()}", "afirmado", t[max(0, m.start() - 10): m.end()].strip()))
+    return out
+
+
+def edad_texto(v: str):
+    """'31A' -> ('31 años', 31.0); '5M' -> ('5 meses', 0.42); '12D' -> ('12 días', 0.03)."""
+    m = re.match(r"\s*(\d+(?:\.\d+)?)\s*([AaMmDdSs]?)", str(v))
+    if not m:
+        return v, None
+    n, u = float(m.group(1)), m.group(2).upper()
+    if u == "M":
+        return f"{n:g} meses", n / 12
+    if u == "D":
+        return f"{n:g} días", n / 365
+    if u == "S":
+        return f"{n:g} semanas", n / 52
+    return f"{n:g} años", n
+
 
 def certeza_frase(frase: str, termino: str = "") -> str:
     f = normalizar(frase)
@@ -98,49 +178,72 @@ def extraer(expediente, registros=None):
             fecha = fecha_fila(tabla, f)
 
             # demográficos
-            for campo in ("Sexo", "Edad"):
-                v = f.get(campo)
-                if v:
-                    L.agregar("demografico", v, tabla, f, f.col(campo), fecha, {"campo": campo.lower()})
+            v = f.get("Sexo")
+            if v:
+                L.agregar("demografico", v, tabla, f, f.col("Sexo"), fecha, {"campo": "sexo"})
+            v = f.get("Edad")
+            if v:
+                txt, anios = edad_texto(v)
+                L.agregar("demografico", txt, tabla, f, f.col("Edad"), fecha, {"campo": "edad", "anios": anios}, texto_fuente=v)
 
             # diagnósticos
             for c_cod, c_des in DIAGNOSTICOS.get(tabla, []):
                 cod, des = f.get(c_cod), f.get(c_des)
+                cod = "" if normalizar(cod) in DIAG_NULO else cod
+                des = "" if normalizar(des) in DIAG_NULO else des
                 if cod or des:
                     L.agregar("diagnostico", des or cod, tabla, f, f.col(c_des) if des else f.col(c_cod), fecha,
                               {"cie10": cod, "sin_descripcion": "si" if cod and not des else "",
                                "sin_codigo": "si" if des and not cod else ""})
 
             # texto libre (para el LLM) + alergias ancladas al fragmento
-            for campo in TEXTO_LIBRE.get(tabla, []):
+            for campo in TEXTO_LIBRE.get(tabla, []) + TEXTO_EXTRA.get(tabla, []):
                 t = f.get(campo)
-                if not t:
+                if not t or normalizar(t) in NO | {"na", "n/a", "negados"}:
                     continue
                 L.agregar("nota", t, tabla, f, f.col(campo), fecha, {"campo": campo})
-                for frase, _pos in oraciones(t):
-                    if "alerg" in normalizar(frase):
-                        L.agregar("alergia", frase[:200], tabla, f, f.col(campo), fecha,
-                                  {"origen": "texto libre"}, certeza_frase(frase, "alerg"), sujeto_frase(frase), frase)
+                for valor, cert, frag in alergias_en_texto(t):
+                    sujeto = "familiar" if campo.lower() == "hf_observaciones" else sujeto_frase(frag)
+                    L.agregar("alergia", valor, tabla, f, f.col(campo), fecha, {"origen": "texto libre"},
+                              cert, sujeto, frag)
 
             if tabla == "historiaclinica":
                 for c, v in f.columnas("PP_"):
-                    _antecedente(L, tabla, f, c, str(v), fecha, "PP_")
+                    if c.lower() not in OBSERVACIONES:
+                        _antecedente(L, tabla, f, c, str(v), fecha, "PP_")
                 for c, v in f.columnas("HF_"):
-                    _antecedente(L, tabla, f, c, str(v), fecha, "HF_")
-                for campo in ("Alcohol", "Fumador", "Cigarros", "Sustancias"):
+                    if c.lower() not in OBSERVACIONES:
+                        _antecedente(L, tabla, f, c, str(v), fecha, "HF_")
+                for campo in ("Alcohol", "Fumador", "Sustancias"):
                     v = f.get(campo)
-                    if v:
+                    if not v:
+                        continue
+                    codigo = HABITOS[campo.lower()].get(normalizar(v))
+                    if codigo:
+                        L.agregar("habito", codigo[0], tabla, f, f.col(campo), fecha, {"habito": campo.lower()},
+                                  codigo[1], texto_fuente=f"{campo}: {v}")
+                    else:
                         est = _valor_campo_sn(v)
                         L.agregar("habito", f"{campo}: {v}", tabla, f, f.col(campo), fecha, {"habito": campo.lower()},
                                   "negado" if est == "negado" else certeza_frase(v))
+                cig = numero(f.get("Cigarros"))
+                if cig:
+                    L.agregar("habito", f"Cigarros: {cig:g}", tabla, f, f.col("Cigarros"), fecha, {"habito": "cigarros"})
                 ts, rh = f.get("TipoSangre"), f.get("RH")
-                if ts or rh:
-                    L.agregar("tipo_sangre", f"{ts} {rh}".strip(), tabla, f, f.col("TipoSangre", "RH"), fecha,
-                              {"grupo": ts, "rh": rh})
-                for campo in ("Embarazos", "Partos", "Cesareas", "Abortos", "FUM"):
-                    v = f.get(campo)
-                    if v:
-                        L.agregar("gineco", f"{campo}: {v}", tabla, f, f.col(campo), fecha, {"campo": campo.lower(), "n": numero(v)})
+                ts = "" if normalizar(ts) in SANGRE_NULA else ts.upper()
+                rh_n = normalizar(rh)
+                rh = "+" if rh_n.startswith("posit") or rh == "+" else "-" if rh_n.startswith("negat") or rh == "-" else ""
+                if ts:
+                    L.agregar("tipo_sangre", f"{ts}{rh}", tabla, f, f.col("TipoSangre"), fecha,
+                              {"grupo": ts, "rh": rh}, texto_fuente=f"{f.get('TipoSangre')} {f.get('RH')}".strip())
+                for campo in ("Embarazos", "Partos", "Cesareas", "Abortos"):
+                    n = numero(f.get(campo))
+                    if n:
+                        L.agregar("gineco", f"{campo}: {n:g}", tabla, f, f.col(campo), fecha, {"campo": campo.lower(), "n": n})
+                fum = parse_fecha(f.get("FUM"))
+                if fum:
+                    L.agregar("gineco", f"FUM: {fecha_iso(fum)}", tabla, f, f.col("FUM"), fecha, {"campo": "fum"},
+                              texto_fuente=f.get("FUM"))
 
             elif tabla == "NotaMedicaUrg":
                 motivo = f.get("MotivoConsulta") or f.get("Subjetivo")[:120]
@@ -151,7 +254,7 @@ def extraer(expediente, registros=None):
             elif tabla == "NotaIngreso_HC":
                 L.agregar("atencion", f"Hospitalización: {f.get('MotivoIngreso') or f.get('DiagnosticoDesc') or 'ingreso'}",
                           tabla, f, f.col("MotivoIngreso"), fecha, {"servicio": "hospitalización", "pronostico": f.get("pronostico")})
-                if f.get("EstudiosRealizados"):
+                if len(f.get("EstudiosRealizados")) >= 15 and "lo mencionado" not in normalizar(f.get("EstudiosRealizados")):
                     L.agregar("estudio", f.get("EstudiosRealizados")[:400], tabla, f, f.col("EstudiosRealizados"), fecha)
 
             elif tabla == "notaegreso":
@@ -159,9 +262,11 @@ def extraer(expediente, registros=None):
                 L.agregar("atencion", f"Egreso: {f.get('MotivoEgreso') or 'egreso hospitalario'}", tabla, f,
                           f.col("MotivoEgreso"), fecha, {"servicio": "egreso", "dias_estancia": f.get("DiasEstancia"),
                                                          "fecha_ingreso": fecha_iso(fi), "fecha_egreso": fecha_iso(fecha)})
-                if f.get("MotivoDefuncion") or "defun" in normalizar(f.get("MotivoEgreso")):
-                    L.agregar("defuncion", f.get("MotivoDefuncion") or f.get("MotivoEgreso"), tabla, f,
-                              f.col("MotivoDefuncion", "MotivoEgreso"), fecha)
+                md = f.get("MotivoDefuncion")
+                md_valido = md and normalizar(md) not in NO | {"na", "n/a"} and len(md) > 3
+                if normalizar(f.get("MotivoEgreso")).startswith("defun") or md_valido:
+                    L.agregar("defuncion", md if md_valido else f.get("MotivoEgreso"), tabla, f,
+                              f.col("MotivoDefuncion") if md_valido else f.col("MotivoEgreso"), fecha)
 
             elif tabla == "NotaPostOperatoria":
                 op = f.get("descoper") or f.get("op_realizada") or f.get("descoperprog")
@@ -180,37 +285,52 @@ def extraer(expediente, registros=None):
 
             elif tabla == "Indicaciones":
                 tipo_ind = normalizar(f.get("Tipo"))
-                if any(x in tipo_ind for x in ("diet", "cuidad", "alimen", "enfer")):
+                if tipo_ind in ("1", "2") or any(x in tipo_ind for x in ("diet", "cuidad", "alimen", "enfer")):
+                    continue  # dietas y cuidados generales
+                articulo = f.get("Articulo")
+                nombre = f.get("Descart") or (articulo if re.search(r"[A-Za-z]", articulo) else "") or \
+                    (f.get("Indicacion") if re.search(r"[A-Za-z]", f.get("Indicacion")) else "")
+                if not nombre:
                     continue
-                nombre = f.get("Articulo", "Indicacion")
-                if nombre:
-                    L.agregar("medicamento", nombre, tabla, f, f.col("Articulo", "Indicacion"), fecha, {
-                        "dosis": f"{f.get('Dosis')} {f.get('UdsDosis')}".strip() if f.get("Dosis") else "",
-                        "via": f.get("Via"),
-                        "frecuencia": f"{f.get('Frecuencia')} {f.get('UdsFrecuencia')}".strip() if f.get("Frecuencia") else "",
-                        "estatus": f.get("Status"), "origen": "indicación hospitalaria"})
+                campo_nombre = f.col("Descart") if f.get("Descart") else f.col("Articulo", "Indicacion")
+                estatus = {"s": "suspendida", "c": "cancelada"}.get(normalizar(f.get("Status")), "")
+                if tipo_ind == "e":
+                    L.agregar("estudio", f"Estudio solicitado: {nombre}", tabla, f, campo_nombre, fecha,
+                              {"estatus": estatus, "origen": "orden de laboratorio o gabinete"})
+                    continue
+                dosis = f.get("Dosis") if numero(f.get("Dosis")) else ""
+                frec = f.get("Frecuencia") if numero(f.get("Frecuencia")) else ""
+                cond = normalizar(f.get("Condiciones"))
+                frecuencia = f"cada {frec} {unidad(f.get('UdsFrecuencia'))}".strip() if frec else \
+                    ("dosis única" if "unica" in cond else "por razón necesaria" if "razon necesaria" in cond else "")
+                L.agregar("medicamento", nombre, tabla, f, campo_nombre, fecha, {
+                    "dosis": f"{dosis} {f.get('UdsDosis')}".strip() if dosis else "",
+                    "via": f.get("Via"), "frecuencia": frecuencia, "estatus": estatus, "estatus_codigo": f.get("Status"),
+                    "origen": "solución intravenosa" if tipo_ind == "s" else "indicación hospitalaria"})
 
             elif tabla == "RecetasDet":
                 nombre = f.get("Desc_Generica", "Descripcion", "Articulo")
                 if nombre:
                     cada = f.get("Cada")
-                    L.agregar("medicamento", nombre, tabla, f, f.col("Desc_Generica", "Descripcion", "Articulo"), None, {
-                        "dosis": f"{f.get('Dosis')} {f.get('Dosis_Uds')}".strip() if f.get("Dosis") else "",
+                    L.agregar("medicamento", nombre, tabla, f, f.col("Desc_Generica", "Descripcion", "Articulo"), fecha, {
+                        "dosis": f"{numero(f.get('Dosis')):g} {f.get('Dosis_Uds')}".strip() if numero(f.get("Dosis")) else "",
                         "via": f.get("Via"),
-                        "frecuencia": f"cada {cada} {f.get('Cada_Uds')}".strip() if cada else "",
-                        "duracion": f"{f.get('Durante')} {f.get('Durante_Uds')}".strip() if f.get("Durante") else "",
+                        "frecuencia": f"cada {cada} {unidad(f.get('Cada_Uds'))}".strip() if numero(cada) else "",
+                        "duracion": f"{f.get('Durante')} {unidad(f.get('Durante_Uds'))}".strip() if numero(f.get("Durante")) else "",
                         "origen": "receta"})
 
             elif tabla == "SignosVitales":
                 for campo, (nom, uni, *_r) in SIGNOS.items():
                     v = numero(f.get(campo))
-                    if v is not None and campo == "Talla" and v < 3:
+                    if not v:
+                        continue  # 0 o vacío = no se midió
+                    if campo == "Talla" and v < 3:
                         v = round(v * 100, 1)  # venía en metros
                     if v is not None:
                         L.agregar("signo_vital", f"{nom}: {v:g} {uni}", tabla, f, f.col(campo), fecha,
                                   {"signo": campo, "num": v, "unidad": uni})
                 sis, dia = numero(f.get("PA_NoInvasiva1")), numero(f.get("PA_NoInvasiva2"))
-                if sis is not None and dia is not None:
+                if sis and dia:
                     L.agregar("signo_vital", f"Presión arterial: {sis:g}/{dia:g} mmHg", tabla, f, f.col("PA_NoInvasiva1"),
                               fecha, {"signo": "PA", "sis": sis, "dia": dia, "unidad": "mmHg"})
 
@@ -224,9 +344,14 @@ def extraer(expediente, registros=None):
 
 
 def _antecedente(L, tabla, f, col, v, fecha, prefijo):
-    lab = etiqueta(col, prefijo)
-    est = _valor_campo_sn(v)
     familiar = prefijo == "HF_"
+    clave = normalizar(col[len(prefijo):])
+    lab = (ETIQ_HF if familiar else ETIQ_PP).get(clave) or etiqueta(col, prefijo)
+    est = _valor_campo_sn(v)
+    if est == "negado" and len(str(v).strip()) <= 2:
+        return  # bandera "N": no aporta al resumen
+    if est == "si" and familiar:
+        lab = f"{lab} en familiares"
     tipo = "antecedente_familiar" if familiar else "antecedente_personal"
     if "alerg" in col.lower() and not familiar:
         tipo = "alergia"

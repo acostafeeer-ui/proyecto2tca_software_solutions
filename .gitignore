@@ -7,3 +7,5 @@ resultados/
 __pycache__/
 .venv/
 guias/
+*.zip
+CONTEXTO_COMPLETO*.txt

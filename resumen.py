@@ -17,7 +17,7 @@ def main():
     r = generar_resumen(a.expediente, a.fecha, a.modo)
 
     e = r["encabezado"]
-    print(f"\nExpediente {r['expediente']}  |  {e['sexo']}  {e['edad']} años  |  Sangre {e['tipo_sangre'] or '—'}  |  motor: {r['modo']}")
+    print(f"\nExpediente {r['expediente']}  |  {e['sexo']}  {e['edad']}  |  Sangre {e['tipo_sangre'] or '—'}  |  motor: {r['modo']}")
     print(f"Alergias: {r['alergias']['estado']}  {' '.join(r['alergias']['afirmadas'])}")
     print("\nALERTAS")
     for x in r["alertas"]:
