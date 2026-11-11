@@ -38,7 +38,7 @@ with st.sidebar:
     st.header("Agenda del día")
     fecha_cita = st.date_input("Fecha de la cita", value=date.today())
     opciones_modo = ["Gemini", "Groq", "Plantilla (sin LLM)"]
-    modo_ui = st.radio("Motor de redacción", opciones_modo, index=0 if disponible("gemini") else (1 if disponible("groq") else 2))
+    modo_ui = st.radio("Motor de redacción", opciones_modo, index=1 if disponible("groq") else (0 if disponible("gemini") else 2))
     modo = {"Gemini": "gemini", "Groq": "groq", "Plantilla (sin LLM)": "plantilla"}[modo_ui]
     if modo != "plantilla" and not disponible(modo):
         st.warning(f"No hay llave de {modo_ui} en .env; se usará el modo plantilla.")
@@ -57,7 +57,7 @@ with st.sidebar:
     with st.container(height=360):
         elegido = st.radio("Citas", etiquetas, label_visibility="collapsed") if etiquetas else None
     expediente = ag["expediente"].iloc[etiquetas.index(elegido)] if elegido else None
-    generar = st.button("Abrir cita", type="primary", use_container_width=True, disabled=expediente is None)
+    generar = st.button("Abrir cita", type="primary", width="stretch", disabled=expediente is None)
 
 if "cache" not in st.session_state:
     st.session_state.cache = {}
@@ -134,7 +134,7 @@ with tab_res:
                         + (f"<br><span class='small'>Sugerencia: {a['pregunta']}</span>" if a["pregunta"] else "")
                         + (f"<br>{chips(a['hechos'])}" if a["hechos"] else "") + "</div>", unsafe_allow_html=True)
             if a["hechos"]:
-                with st.popover("Ver fuentes", use_container_width=False):
+                with st.popover("Ver fuentes", width="content"):
                     detalle_refs(a["hechos"])
     with der:
         st.markdown("#### Resumen clínico")
@@ -154,12 +154,12 @@ with tab_ev:
                         "registros": 1 + len(v["refs_extra"])} for k, v in ev.items()])
     tipo = st.multiselect("Tipo de hecho", sorted(df["tipo"].unique()) if len(df) else [])
     vista = df[df["tipo"].isin(tipo)] if tipo else df
-    st.dataframe(vista, use_container_width=True, hide_index=True, height=480)
+    st.dataframe(vista, width="stretch", hide_index=True, height=480)
 
 with tab_aud:
     st.write(f"Verificadas: {fid['verificadas']} · Reescritas: {fid['reescritas']} · Eliminadas: {fid['eliminadas']}")
     if res["auditoria"]:
-        st.dataframe(pd.DataFrame(res["auditoria"]), use_container_width=True, hide_index=True)
+        st.dataframe(pd.DataFrame(res["auditoria"]), width="stretch", hide_index=True)
     else:
         st.write("Ninguna frase fue eliminada ni reescrita.")
     if res["estadisticas"].get("llm"):

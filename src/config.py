@@ -101,8 +101,27 @@ PSEUDO_NEGACION = ["sin embargo", "sin cambios", "no solo", "sin otro"]
 MAX_NOTAS_LLM = 10
 MAX_CHARS_NOTA = 1200
 
+# Problemas crónicos: prefijos CIE-10 (se comparan sin puntos ni espacios, en mayúsculas)
+CIE10_CRONICOS = [
+    "E10", "E11",                                # diabetes
+    "I10", "I11", "I12", "I13", "I14", "I15",    # hipertensión
+    "J44", "J45",                                # EPOC, asma
+    "N18",                                       # enfermedad renal crónica
+    "I25", "I50",                                # cardiopatía isquémica, insuficiencia cardiaca
+    "E66",                                       # obesidad
+    "E78",                                       # dislipidemia
+    "C",                                         # cáncer
+    "B20",                                       # VIH
+    "K70", "K71", "K72", "K73", "K74",           # hepatopatía crónica
+    "F",                                         # salud mental crónica
+    "G40",                                       # epilepsia
+    "E03",                                       # hipotiroidismo
+]
+# ...o descripción que contenga alguno de estos términos (sin acentos, palabra completa)
+TERMINOS_CRONICOS = ["diabetes", "hipertension", "epoc", "asma", "insuficiencia renal cronica"]
+
 SECCIONES = [
-    "Problemas activos", "Medicamentos recientes", "Antecedentes personales y quirúrgicos",
+    "Problemas crónicos", "Diagnósticos previos", "Medicamentos recientes", "Antecedentes personales y quirúrgicos",
     "Antecedentes familiares", "Gineco-obstétricos", "Hábitos y factores de riesgo",
     "Últimas atenciones", "Estudios y signos vitales recientes",
 ]

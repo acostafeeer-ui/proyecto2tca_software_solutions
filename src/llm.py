@@ -2,7 +2,6 @@
 import json
 import os
 import re
-import time
 
 from dotenv import load_dotenv
 
@@ -12,6 +11,7 @@ load_dotenv()
 
 MODELO_GEMINI = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 MODELO_GROQ = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
+TIMEOUT_LLM_S = 45
 
 SISTEMA = """Eres un asistente que prepara a un médico antes de una consulta.
 Recibes una lista de HECHOS de UN solo paciente. Cada hecho tiene un ID (H-0001, H-0002...).
@@ -23,7 +23,9 @@ Reglas obligatorias:
 5. Conserva fechas, dosis, unidades y números exactamente como aparecen en el hecho.
 6. Las NOTAS son texto libre del médico: puedes resumir de ellas datos clínicos relevantes (síntomas, estudios, resultados), citando el ID de la nota.
 7. Frases cortas, en español, estilo clínico. Máximo 8 frases por sección. Si una sección no tiene hechos, devuélvela vacía.
-8. Responde solo con JSON válido con esta forma:
+8. Diagnósticos: los marcados "| crónico" van en "Problemas crónicos"; todos los demás van en "Diagnósticos previos", ordenados del más reciente al más antiguo y con su fecha. No muevas un diagnóstico de una sección a la otra.
+9. SIGNOS VITALES: cada línea es un signo; cita el ID de esa misma línea y escribe el nombre, valor, unidad y fecha tal como aparecen (p. ej. "Saturación de O2: 98 % (2023-09-12)"). No los califiques ("estables", "normales").
+10. Responde solo con JSON válido con esta forma:
 {"secciones": [{"titulo": "<una de las secciones>", "frases": [{"texto": "...", "refs": ["H-0001"]}]}]}
 Secciones permitidas: """ + "; ".join(SECCIONES) + "."
 
@@ -31,6 +33,10 @@ Secciones permitidas: """ + "; ".join(SECCIONES) + "."
 def _linea(h):
     det = {k: v for k, v in h["detalle"].items() if k not in ("num", "campo", "origen") and v}
     extra = f" | {json.dumps(det, ensure_ascii=False)}" if det else ""
+    if h["tipo"] == "diagnostico":
+        from .plantillas import es_cronico
+        if es_cronico(h):
+            extra += " | crónico"
     return f"{h['id']} | {h['tipo']} | {h['valor']} | fecha {h['fecha'] or 's/f'} | {h['certeza']} | {h['sujeto']}{extra}"
 
 
@@ -47,11 +53,15 @@ def contexto(hechos):
     ult_por_signo = {}
     for h in _ultimos(sv, 500):
         ult_por_signo.setdefault(h["detalle"].get("signo"), h)
-    sel += list(ult_por_signo.values())
     notas = _ultimos(por("nota"), MAX_NOTAS_LLM)
     lineas = [_linea(h) for h in sel]
+    # signos vitales en bloque propio: una línea por signo con su ID, nombre legible, valor, unidad y fecha
+    # (sin el nombre interno de la columna, p. ej. "SatO2", que el modelo copiaba)
+    lineas_sv = [f"{h['id']} | {h['valor']} | fecha {h['fecha'] or 's/f'} | cita {h['id']}" for h in ult_por_signo.values()]
     lineas_notas = [f"{n['id']} | NOTA {n['detalle'].get('campo','')} | fecha {n['fecha'] or 's/f'} | {n['valor'][:MAX_CHARS_NOTA]}" for n in notas]
-    return "HECHOS:\n" + "\n".join(lineas) + "\n\nNOTAS:\n" + "\n".join(lineas_notas)
+    return ("HECHOS:\n" + "\n".join(lineas)
+            + "\n\nSIGNOS VITALES (último valor de cada signo):\n" + "\n".join(lineas_sv)
+            + "\n\nNOTAS:\n" + "\n".join(lineas_notas))
 
 
 def _json(texto):
@@ -67,11 +77,21 @@ def _json(texto):
 def llamar_gemini(prompt):
     from google import genai
     from google.genai import types
-    cliente = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+    # timeout en milisegundos; sin reintentos del SDK (si falla, el pipeline usa la plantilla)
+    cliente = genai.Client(api_key=os.environ["GEMINI_API_KEY"],
+                           http_options=types.HttpOptions(timeout=TIMEOUT_LLM_S * 1000,
+                                                          retry_options=types.HttpRetryOptions(attempts=1)))
+    # razonamiento interno al mínimo: Gemini 2.5 acepta thinking_budget=0; gemini-3.8-flash rechaza MINIMAL,
+    # así que se usa LOW (el nivel más bajo que acepta)
+    if MODELO_GEMINI.startswith("gemini-2"):
+        thinking = types.ThinkingConfig(thinking_budget=0)
+    else:
+        thinking = types.ThinkingConfig(thinking_level=types.ThinkingLevel.LOW)
     r = cliente.models.generate_content(
         model=MODELO_GEMINI, contents=prompt,
         config=types.GenerateContentConfig(system_instruction=SISTEMA, temperature=0,
-                                           response_mime_type="application/json"))
+                                           response_mime_type="application/json",
+                                           thinking_config=thinking))
     return r.text
 
 
@@ -93,8 +113,13 @@ def resumir(hechos, proveedor="gemini"):
     prompt = contexto(hechos)
     info = {"proveedor": proveedor, "caracteres_contexto": len(prompt), "intentos": 0, "error": ""}
     fn = llamar_gemini if proveedor == "gemini" else llamar_groq
-    for intento in range(2):
+    # Un solo intento, salvo en Groq cuando la respuesta no es JSON válido (incluye su error 400
+    # "Failed to generate JSON"): entonces UN reintento inmediato. Timeout, 503, límite de solicitudes
+    # u otro error -> sin reintento; el pipeline usa el modo plantilla.
+    max_intentos = 2 if proveedor == "groq" else 1
+    for intento in range(max_intentos):
         info["intentos"] = intento + 1
+        json_invalido = False
         try:
             datos = _json(fn(prompt))
             if datos and isinstance(datos.get("secciones"), list):
@@ -106,7 +131,14 @@ def resumir(hechos, proveedor="gemini"):
                     out[tit] = [(str(f.get("texto", "")).strip(), [str(r) for r in f.get("refs", [])])
                                 for f in s.get("frases", []) if str(f.get("texto", "")).strip()]
                 return out, info
+            json_invalido = True
+            info["error"] = "respuesta sin JSON válido con 'secciones'"
         except Exception as e:  # red, límite de solicitudes, JSON inválido
             info["error"] = f"{type(e).__name__}: {str(e)[:200]}"
-            time.sleep(2)
+            msg = str(e)
+            json_invalido = (isinstance(e, (json.JSONDecodeError, AttributeError))
+                             or any(x in msg for x in ("Failed to generate JSON", "Failed to validate JSON",
+                                                       "json_validate_failed")))
+        if not json_invalido:
+            break
     return None, info

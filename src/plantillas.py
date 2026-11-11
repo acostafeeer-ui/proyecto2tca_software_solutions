@@ -1,8 +1,19 @@
 """Resumen por plantillas: determinista, sin LLM. Sirve de respaldo y para reescribir frases que no pasan el verificador."""
+import re
 from collections import Counter
 
-from .config import SIGNOS
+from .config import CIE10_CRONICOS, SIGNOS, TERMINOS_CRONICOS
 from .utils import normalizar
+
+_RE_CRONICO = re.compile(r"\b(" + "|".join(re.escape(t) for t in TERMINOS_CRONICOS) + r")\b")
+
+
+def es_cronico(h) -> bool:
+    """Diagnóstico crónico: código CIE-10 con prefijo de CIE10_CRONICOS o descripción con un término crónico."""
+    cod = re.sub(r"[^A-Z0-9]", "", str(h["detalle"].get("cie10") or "").upper())
+    if cod and any(cod.startswith(p) for p in CIE10_CRONICOS):
+        return True
+    return bool(_RE_CRONICO.search(normalizar(h["valor"])))
 
 
 def _fecha(h):
@@ -45,7 +56,9 @@ def _ultimos(hs, n):
 def secciones_plantilla(hechos):
     T = lambda tipo, **kw: [h for h in hechos if h["tipo"] == tipo and all(h.get(k) == v for k, v in kw.items())]
     sec = {}
-    sec["Problemas activos"] = [(frase_de(h), [h["id"]]) for h in _ultimos(T("diagnostico", certeza="afirmado"), 8)]
+    dx = _ultimos(T("diagnostico", certeza="afirmado"), 10000)  # del más reciente al más antiguo
+    sec["Problemas crónicos"] = [(frase_de(h), [h["id"]]) for h in dx if es_cronico(h)][:8]
+    sec["Diagnósticos previos"] = [(frase_de(h), [h["id"]]) for h in dx if not es_cronico(h)][:8]
     meds = []
     vistos = set()
     for h in _ultimos(T("medicamento"), 40):
