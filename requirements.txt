@@ -1,0 +1,11 @@
+duckdb>=1.0
+pandas>=2.0
+pyarrow>=14
+streamlit>=1.36
+rapidfuzz>=3.0
+google-genai>=1.0
+groq>=0.9
+python-dotenv>=1.0
+rouge-score>=0.1.2
+sacrebleu>=2.4
+nltk>=3.8

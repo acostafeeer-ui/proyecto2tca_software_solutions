@@ -1,0 +1,1733 @@
+{
+  "expediente": "100022",
+  "fecha_cita": "2026-11-10",
+  "generado": "2026-11-10T19:13:15",
+  "modo": "plantilla",
+  "encabezado": {
+    "sexo": "M",
+    "edad": "82",
+    "tipo_sangre": "A +",
+    "ultima_atencion": "Urgencias: DESCONTROL GLUCEMICO (triage 4, destino HOSPITALIZACION) (2023-11-29).",
+    "refs": [
+      "H-0013",
+      "H-0014",
+      "H-0138",
+      "H-0012"
+    ]
+  },
+  "alergias": {
+    "estado": "niega",
+    "afirmadas": [],
+    "hechos": [
+      "H-0001",
+      "H-0002"
+    ]
+  },
+  "alertas": [],
+  "secciones": [
+    {
+      "titulo": "Problemas activos",
+      "frases": [
+        {
+          "texto": "DIABETES MELLITUS TIPO 2 SIN COMPLICACIONES, CIE-10 E11.9 (2023-11-29).",
+          "refs": [
+            "H-0020"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "COLELITIASIS, CIE-10 K80.2 (desde 2023-10-01, último registro 2023-10-05).",
+          "refs": [
+            "H-0019"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "INFECCION DE VIAS URINARIAS, CIE-10 N39.0 (desde 2023-03-15, último registro 2023-09-22).",
+          "refs": [
+            "H-0016"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "NEUMONIA NO ESPECIFICADA, CIE-10 J18.9 (2023-07-26).",
+          "refs": [
+            "H-0018"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "DOLOR TORACICO, CIE-10 R07.4 (2023-05-23).",
+          "refs": [
+            "H-0017"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "ENFERMEDAD PULMONAR OBSTRUCTIVA CRONICA, CIE-10 J44.9 (2023-03-15).",
+          "refs": [
+            "H-0015"
+          ],
+          "estado": "verificada"
+        }
+      ]
+    },
+    {
+      "titulo": "Medicamentos recientes",
+      "frases": [
+        {
+          "texto": "KETOROLACO: 30 MG, INTRAVENOSA, cada 8 HORAS, 7 DIAS (2023-10-05).",
+          "refs": [
+            "H-0027"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "OMEPRAZOL: 40 MG, INTRAVENOSA, cada 24 HORAS, 7 DIAS (2023-10-05).",
+          "refs": [
+            "H-0028"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "LOSARTAN: 50 MG, ORAL, 24 HORAS, estatus ACTIVA (2023-10-01).",
+          "refs": [
+            "H-0024"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "CEFTRIAXONA: 1 G, INTRAVENOSA, 12 HORAS, estatus ACTIVA (2023-10-01).",
+          "refs": [
+            "H-0025"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "METFORMINA: 850 MG, ORAL, 12 HORAS, estatus ACTIVA (2023-10-01).",
+          "refs": [
+            "H-0026"
+          ],
+          "estado": "verificada"
+        }
+      ]
+    },
+    {
+      "titulo": "Antecedentes personales y quirúrgicos",
+      "frases": [
+        {
+          "texto": "COLECISTECTOMIA LAPAROSCOPICA (2023-10-02).",
+          "refs": [
+            "H-0073"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Quirurgicos: COLECISTECTOMIA 2019 (2023-03-15).",
+          "refs": [
+            "H-0005"
+          ],
+          "estado": "verificada"
+        }
+      ]
+    },
+    {
+      "titulo": "Antecedentes familiares",
+      "frases": [
+        {
+          "texto": "Diabetes: PADRE (2023-03-15).",
+          "refs": [
+            "H-0003"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Hipertension (2023-03-15).",
+          "refs": [
+            "H-0004"
+          ],
+          "estado": "verificada"
+        }
+      ]
+    },
+    {
+      "titulo": "Gineco-obstétricos",
+      "frases": []
+    },
+    {
+      "titulo": "Hábitos y factores de riesgo",
+      "frases": [
+        {
+          "texto": "Alcohol: NEGADO (2023-03-15).",
+          "refs": [
+            "H-0022"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Fumador: SI (2023-03-15).",
+          "refs": [
+            "H-0023"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "IMC calculado 21.4 (normal) con peso 64.1 kg y talla 173 cm.",
+          "refs": [
+            "H-0126",
+            "H-0127"
+          ],
+          "estado": "verificada"
+        }
+      ]
+    },
+    {
+      "titulo": "Últimas atenciones",
+      "frases": [
+        {
+          "texto": "Urgencias: DESCONTROL GLUCEMICO (triage 4, destino HOSPITALIZACION) (2023-11-29).",
+          "refs": [
+            "H-0012"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Egreso: MEJORIA (4 días de estancia) (2023-10-05).",
+          "refs": [
+            "H-0011"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Hospitalización: DOLOR TORACICO OPRESIVO (2023-10-01).",
+          "refs": [
+            "H-0010"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Urgencias: DISURIA Y FIEBRE (triage 4, destino DOMICILIO) (2023-09-22).",
+          "refs": [
+            "H-0009"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Urgencias: DOLOR ABDOMINAL DE 2 DIAS DE EVOLUCION (triage 3, destino HOSPITALIZACION) (2023-07-26).",
+          "refs": [
+            "H-0008"
+          ],
+          "estado": "verificada"
+        }
+      ]
+    },
+    {
+      "titulo": "Estudios y signos vitales recientes",
+      "frases": [
+        {
+          "texto": "BIOMETRIA HEMATICA: LEUCOCITOS 13,500. QUIMICA SANGUINEA: GLUCOSA 210 MG/DL. (2023-10-01).",
+          "refs": [
+            "H-0021"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Temperatura: 37.7 °C (fuera de rango) (2023-11-29).",
+          "refs": [
+            "H-0122"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Frecuencia cardiaca: 105 lpm (fuera de rango) (2023-11-29).",
+          "refs": [
+            "H-0123"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Frecuencia respiratoria: 24 rpm (fuera de rango) (2023-11-29).",
+          "refs": [
+            "H-0124"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Saturación de O2: 91 % (fuera de rango) (2023-11-29).",
+          "refs": [
+            "H-0125"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Glucosa capilar: 207 mg/dL (fuera de rango) (2023-11-29).",
+          "refs": [
+            "H-0128"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Presión arterial: 148/93 mmHg (2023-11-29).",
+          "refs": [
+            "H-0129"
+          ],
+          "estado": "verificada"
+        }
+      ]
+    }
+  ],
+  "fidelidad": {
+    "verificadas": 30,
+    "reescritas": 0,
+    "eliminadas": 0
+  },
+  "auditoria": [],
+  "estadisticas": {
+    "hechos": 138,
+    "registros_fuente": 199,
+    "duplicados_colapsados": 61,
+    "segundos": 0.06,
+    "llm": {}
+  },
+  "evidencia": {
+    "H-0001": {
+      "ref": "historiaclinica#1024.Interrogatorio",
+      "refs_extra": [
+        "NotaMedicaUrg#1059.Subjetivo",
+        "NotaMedicaUrg#1060.Subjetivo",
+        "NotaMedicaUrg#1061.Subjetivo",
+        "NotaMedicaUrg#1062.Subjetivo"
+      ],
+      "tipo": "alergia",
+      "valor": "NIEGA ALERGIAS.",
+      "fecha": "2023-03-15",
+      "texto_fuente": "NIEGA ALERGIAS.",
+      "certeza": "negado",
+      "expediente": "100022"
+    },
+    "H-0002": {
+      "ref": "historiaclinica#1024.PP_Alergias",
+      "refs_extra": [],
+      "tipo": "alergia",
+      "valor": "Alergias: NEGADAS",
+      "fecha": "2023-03-15",
+      "texto_fuente": "Alergias: NEGADAS",
+      "certeza": "negado",
+      "expediente": "100022"
+    },
+    "H-0003": {
+      "ref": "historiaclinica#1024.HF_Diabetes",
+      "refs_extra": [],
+      "tipo": "antecedente_familiar",
+      "valor": "Diabetes: PADRE",
+      "fecha": "2023-03-15",
+      "texto_fuente": "Diabetes: PADRE",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0004": {
+      "ref": "historiaclinica#1024.HF_Hipertension",
+      "refs_extra": [],
+      "tipo": "antecedente_familiar",
+      "valor": "Hipertension",
+      "fecha": "2023-03-15",
+      "texto_fuente": "Hipertension: SI",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0005": {
+      "ref": "historiaclinica#1024.PP_Quirurgicos",
+      "refs_extra": [],
+      "tipo": "antecedente_personal",
+      "valor": "Quirurgicos: COLECISTECTOMIA 2019",
+      "fecha": "2023-03-15",
+      "texto_fuente": "Quirurgicos: COLECISTECTOMIA 2019",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0006": {
+      "ref": "historiaclinica#1024.PP_Transfusionales",
+      "refs_extra": [],
+      "tipo": "antecedente_personal",
+      "valor": "Transfusionales: NEGADOS",
+      "fecha": "2023-03-15",
+      "texto_fuente": "Transfusionales: NEGADOS",
+      "certeza": "negado",
+      "expediente": "100022"
+    },
+    "H-0007": {
+      "ref": "NotaMedicaUrg#1059.MotivoConsulta",
+      "refs_extra": [],
+      "tipo": "atencion",
+      "valor": "Urgencias: DISURIA Y FIEBRE",
+      "fecha": "2023-05-23",
+      "texto_fuente": "Urgencias: DISURIA Y FIEBRE",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0008": {
+      "ref": "NotaMedicaUrg#1060.MotivoConsulta",
+      "refs_extra": [],
+      "tipo": "atencion",
+      "valor": "Urgencias: DOLOR ABDOMINAL DE 2 DIAS DE EVOLUCION",
+      "fecha": "2023-07-26",
+      "texto_fuente": "Urgencias: DOLOR ABDOMINAL DE 2 DIAS DE EVOLUCION",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0009": {
+      "ref": "NotaMedicaUrg#1061.MotivoConsulta",
+      "refs_extra": [],
+      "tipo": "atencion",
+      "valor": "Urgencias: DISURIA Y FIEBRE",
+      "fecha": "2023-09-22",
+      "texto_fuente": "Urgencias: DISURIA Y FIEBRE",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0010": {
+      "ref": "NotaIngreso_HC#1015.MotivoIngreso",
+      "refs_extra": [],
+      "tipo": "atencion",
+      "valor": "Hospitalización: DOLOR TORACICO OPRESIVO",
+      "fecha": "2023-10-01",
+      "texto_fuente": "Hospitalización: DOLOR TORACICO OPRESIVO",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0011": {
+      "ref": "notaegreso#1014.MotivoEgreso",
+      "refs_extra": [],
+      "tipo": "atencion",
+      "valor": "Egreso: MEJORIA",
+      "fecha": "2023-10-05",
+      "texto_fuente": "Egreso: MEJORIA",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0012": {
+      "ref": "NotaMedicaUrg#1062.MotivoConsulta",
+      "refs_extra": [],
+      "tipo": "atencion",
+      "valor": "Urgencias: DESCONTROL GLUCEMICO",
+      "fecha": "2023-11-29",
+      "texto_fuente": "Urgencias: DESCONTROL GLUCEMICO",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0013": {
+      "ref": "historiaclinica#1024.Sexo",
+      "refs_extra": [
+        "Indicaciones#1057.Sexo",
+        "Indicaciones#1058.Sexo",
+        "Indicaciones#1059.Sexo",
+        "Indicaciones#1060.Sexo",
+        "NotaIngreso_HC#1015.Sexo",
+        "NotaMedicaUrg#1059.Sexo",
+        "NotaMedicaUrg#1060.Sexo",
+        "NotaMedicaUrg#1061.Sexo",
+        "NotaMedicaUrg#1062.Sexo",
+        "NotaPostOperatoria#1004.Sexo",
+        "NotasEvolucion#1072.Sexo",
+        "NotasEvolucion#1073.Sexo",
+        "NotasEvolucion#1074.Sexo",
+        "NotasEvolucion#1075.Sexo",
+        "Recetas#1015.Sexo",
+        "SignosVitales#1117.Sexo",
+        "SignosVitales#1118.Sexo",
+        "SignosVitales#1119.Sexo",
+        "SignosVitales#1120.Sexo",
+        "SignosVitales#1121.Sexo"
+      ],
+      "tipo": "demografico",
+      "valor": "M",
+      "fecha": "2023-03-15",
+      "texto_fuente": "M",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0014": {
+      "ref": "historiaclinica#1024.Edad",
+      "refs_extra": [
+        "Indicaciones#1057.Edad",
+        "Indicaciones#1058.Edad",
+        "Indicaciones#1059.Edad",
+        "Indicaciones#1060.Edad",
+        "NotaIngreso_HC#1015.Edad",
+        "NotaMedicaUrg#1059.Edad",
+        "NotaMedicaUrg#1060.Edad",
+        "NotaMedicaUrg#1061.Edad",
+        "NotaMedicaUrg#1062.Edad",
+        "NotaPostOperatoria#1004.Edad",
+        "NotasEvolucion#1072.Edad",
+        "NotasEvolucion#1073.Edad",
+        "NotasEvolucion#1074.Edad",
+        "NotasEvolucion#1075.Edad",
+        "Recetas#1015.Edad",
+        "SignosVitales#1117.Edad",
+        "SignosVitales#1118.Edad",
+        "SignosVitales#1119.Edad",
+        "SignosVitales#1120.Edad",
+        "SignosVitales#1121.Edad"
+      ],
+      "tipo": "demografico",
+      "valor": "82",
+      "fecha": "2023-03-15",
+      "texto_fuente": "82",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0015": {
+      "ref": "historiaclinica#1024.Desdiag1",
+      "refs_extra": [],
+      "tipo": "diagnostico",
+      "valor": "ENFERMEDAD PULMONAR OBSTRUCTIVA CRONICA",
+      "fecha": "2023-03-15",
+      "texto_fuente": "ENFERMEDAD PULMONAR OBSTRUCTIVA CRONICA",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0016": {
+      "ref": "historiaclinica#1024.Desdiag2",
+      "refs_extra": [
+        "NotaMedicaUrg#1061.DesDiag1"
+      ],
+      "tipo": "diagnostico",
+      "valor": "INFECCION DE VIAS URINARIAS",
+      "fecha": "2023-03-15",
+      "texto_fuente": "INFECCION DE VIAS URINARIAS",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0017": {
+      "ref": "NotaMedicaUrg#1059.DesDiag1",
+      "refs_extra": [],
+      "tipo": "diagnostico",
+      "valor": "DOLOR TORACICO",
+      "fecha": "2023-05-23",
+      "texto_fuente": "DOLOR TORACICO",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0018": {
+      "ref": "NotaMedicaUrg#1060.DesDiag1",
+      "refs_extra": [],
+      "tipo": "diagnostico",
+      "valor": "NEUMONIA NO ESPECIFICADA",
+      "fecha": "2023-07-26",
+      "texto_fuente": "NEUMONIA NO ESPECIFICADA",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0019": {
+      "ref": "NotaIngreso_HC#1015.desdiag1",
+      "refs_extra": [
+        "NotaIngreso_HC#1015.DiagnosticoDesc",
+        "NotasEvolucion#1072.desdiag1",
+        "NotasEvolucion#1073.desdiag1",
+        "NotasEvolucion#1074.desdiag1",
+        "NotasEvolucion#1075.desdiag1",
+        "Recetas#1015.desdiag",
+        "notaegreso#1014.DescDiag1"
+      ],
+      "tipo": "diagnostico",
+      "valor": "COLELITIASIS",
+      "fecha": "2023-10-01",
+      "texto_fuente": "COLELITIASIS",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0020": {
+      "ref": "NotaMedicaUrg#1062.DesDiag1",
+      "refs_extra": [],
+      "tipo": "diagnostico",
+      "valor": "DIABETES MELLITUS TIPO 2 SIN COMPLICACIONES",
+      "fecha": "2023-11-29",
+      "texto_fuente": "DIABETES MELLITUS TIPO 2 SIN COMPLICACIONES",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0021": {
+      "ref": "NotaIngreso_HC#1015.EstudiosRealizados",
+      "refs_extra": [],
+      "tipo": "estudio",
+      "valor": "BIOMETRIA HEMATICA: LEUCOCITOS 13,500. QUIMICA SANGUINEA: GLUCOSA 210 MG/DL.",
+      "fecha": "2023-10-01",
+      "texto_fuente": "BIOMETRIA HEMATICA: LEUCOCITOS 13,500. QUIMICA SANGUINEA: GLUCOSA 210 MG/DL.",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0022": {
+      "ref": "historiaclinica#1024.Alcohol",
+      "refs_extra": [],
+      "tipo": "habito",
+      "valor": "Alcohol: NEGADO",
+      "fecha": "2023-03-15",
+      "texto_fuente": "Alcohol: NEGADO",
+      "certeza": "negado",
+      "expediente": "100022"
+    },
+    "H-0023": {
+      "ref": "historiaclinica#1024.Fumador",
+      "refs_extra": [],
+      "tipo": "habito",
+      "valor": "Fumador: SI",
+      "fecha": "2023-03-15",
+      "texto_fuente": "Fumador: SI",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0024": {
+      "ref": "Indicaciones#1057.Articulo",
+      "refs_extra": [],
+      "tipo": "medicamento",
+      "valor": "LOSARTAN",
+      "fecha": "2023-10-01",
+      "texto_fuente": "LOSARTAN",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0025": {
+      "ref": "Indicaciones#1058.Articulo",
+      "refs_extra": [],
+      "tipo": "medicamento",
+      "valor": "CEFTRIAXONA",
+      "fecha": "2023-10-01",
+      "texto_fuente": "CEFTRIAXONA",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0026": {
+      "ref": "Indicaciones#1059.Articulo",
+      "refs_extra": [],
+      "tipo": "medicamento",
+      "valor": "METFORMINA",
+      "fecha": "2023-10-01",
+      "texto_fuente": "METFORMINA",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0027": {
+      "ref": "RecetasDet#1029.Desc_Generica",
+      "refs_extra": [],
+      "tipo": "medicamento",
+      "valor": "KETOROLACO",
+      "fecha": "2023-10-05",
+      "texto_fuente": "KETOROLACO",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0028": {
+      "ref": "RecetasDet#1030.Desc_Generica",
+      "refs_extra": [],
+      "tipo": "medicamento",
+      "valor": "OMEPRAZOL",
+      "fecha": "2023-10-05",
+      "texto_fuente": "OMEPRAZOL",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0029": {
+      "ref": "historiaclinica#1024.Interrogatorio",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "PACIENTE MASCULINO DE 82 AÑOS. NIEGA ALERGIAS.",
+      "fecha": "2023-03-15",
+      "texto_fuente": "PACIENTE MASCULINO DE 82 AÑOS. NIEGA ALERGIAS.",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0030": {
+      "ref": "historiaclinica#1024.MotivoConsulta",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "DISURIA Y FIEBRE",
+      "fecha": "2023-03-15",
+      "texto_fuente": "DISURIA Y FIEBRE",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0031": {
+      "ref": "historiaclinica#1024.MedicamentosActuales",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "ENFERMEDAD PULMONAR EN TRATAMIENTO",
+      "fecha": "2023-03-15",
+      "texto_fuente": "ENFERMEDAD PULMONAR EN TRATAMIENTO",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0032": {
+      "ref": "NotaMedicaUrg#1059.MotivoConsulta",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "DISURIA Y FIEBRE",
+      "fecha": "2023-05-23",
+      "texto_fuente": "DISURIA Y FIEBRE",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0033": {
+      "ref": "NotaMedicaUrg#1059.Subjetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "REFIERE DOLOR DE INTENSIDAD 7/10. NIEGA ALERGIAS.",
+      "fecha": "2023-05-23",
+      "texto_fuente": "REFIERE DOLOR DE INTENSIDAD 7/10. NIEGA ALERGIAS.",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0034": {
+      "ref": "NotaMedicaUrg#1059.Objetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "CONSCIENTE, ORIENTADO, HIDRATADO.",
+      "fecha": "2023-05-23",
+      "texto_fuente": "CONSCIENTE, ORIENTADO, HIDRATADO.",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0035": {
+      "ref": "NotaMedicaUrg#1059.Apreciativo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "DOLOR TORACICO",
+      "fecha": "2023-05-23",
+      "texto_fuente": "DOLOR TORACICO",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0036": {
+      "ref": "NotaMedicaUrg#1059.Plan1",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "ANALGESIA Y VIGILANCIA",
+      "fecha": "2023-05-23",
+      "texto_fuente": "ANALGESIA Y VIGILANCIA",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0037": {
+      "ref": "NotaMedicaUrg#1060.MotivoConsulta",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "DOLOR ABDOMINAL DE 2 DIAS DE EVOLUCION",
+      "fecha": "2023-07-26",
+      "texto_fuente": "DOLOR ABDOMINAL DE 2 DIAS DE EVOLUCION",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0038": {
+      "ref": "NotaMedicaUrg#1060.Subjetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "REFIERE DOLOR DE INTENSIDAD 7/10. NIEGA ALERGIAS.",
+      "fecha": "2023-07-26",
+      "texto_fuente": "REFIERE DOLOR DE INTENSIDAD 7/10. NIEGA ALERGIAS.",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0039": {
+      "ref": "NotaMedicaUrg#1060.Objetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "CONSCIENTE, ORIENTADO, HIDRATADO.",
+      "fecha": "2023-07-26",
+      "texto_fuente": "CONSCIENTE, ORIENTADO, HIDRATADO.",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0040": {
+      "ref": "NotaMedicaUrg#1060.Apreciativo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "NEUMONIA NO ESPECIFICADA",
+      "fecha": "2023-07-26",
+      "texto_fuente": "NEUMONIA NO ESPECIFICADA",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0041": {
+      "ref": "NotaMedicaUrg#1060.Plan1",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "ANALGESIA Y VIGILANCIA",
+      "fecha": "2023-07-26",
+      "texto_fuente": "ANALGESIA Y VIGILANCIA",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0042": {
+      "ref": "NotaMedicaUrg#1061.MotivoConsulta",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "DISURIA Y FIEBRE",
+      "fecha": "2023-09-22",
+      "texto_fuente": "DISURIA Y FIEBRE",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0043": {
+      "ref": "NotaMedicaUrg#1061.Subjetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "REFIERE DOLOR DE INTENSIDAD 7/10. NIEGA ALERGIAS.",
+      "fecha": "2023-09-22",
+      "texto_fuente": "REFIERE DOLOR DE INTENSIDAD 7/10. NIEGA ALERGIAS.",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0044": {
+      "ref": "NotaMedicaUrg#1061.Objetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "CONSCIENTE, ORIENTADO, HIDRATADO.",
+      "fecha": "2023-09-22",
+      "texto_fuente": "CONSCIENTE, ORIENTADO, HIDRATADO.",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0045": {
+      "ref": "NotaMedicaUrg#1061.Apreciativo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "INFECCION DE VIAS URINARIAS",
+      "fecha": "2023-09-22",
+      "texto_fuente": "INFECCION DE VIAS URINARIAS",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0046": {
+      "ref": "NotaMedicaUrg#1061.Plan1",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "ANALGESIA Y VIGILANCIA",
+      "fecha": "2023-09-22",
+      "texto_fuente": "ANALGESIA Y VIGILANCIA",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0047": {
+      "ref": "NotaIngreso_HC#1015.MotivoIngreso",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "DOLOR TORACICO OPRESIVO",
+      "fecha": "2023-10-01",
+      "texto_fuente": "DOLOR TORACICO OPRESIVO",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0048": {
+      "ref": "NotaIngreso_HC#1015.Antecedentes",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "SIN ANTECEDENTES DE IMPORTANCIA",
+      "fecha": "2023-10-01",
+      "texto_fuente": "SIN ANTECEDENTES DE IMPORTANCIA",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0049": {
+      "ref": "NotaIngreso_HC#1015.EstudiosRealizados",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "BIOMETRIA HEMATICA: LEUCOCITOS 13,500. QUIMICA SANGUINEA: GLUCOSA 210 MG/DL.",
+      "fecha": "2023-10-01",
+      "texto_fuente": "BIOMETRIA HEMATICA: LEUCOCITOS 13,500. QUIMICA SANGUINEA: GLUCOSA 210 MG/DL.",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0050": {
+      "ref": "NotasEvolucion#1072.Subjetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "fecha": "2023-10-01",
+      "texto_fuente": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0051": {
+      "ref": "NotasEvolucion#1072.Objetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "SIGNOS VITALES ESTABLES",
+      "fecha": "2023-10-01",
+      "texto_fuente": "SIGNOS VITALES ESTABLES",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0052": {
+      "ref": "NotasEvolucion#1072.Analisis",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "COLELITIASIS",
+      "fecha": "2023-10-01",
+      "texto_fuente": "COLELITIASIS",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0053": {
+      "ref": "NotasEvolucion#1072.Plan1",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "CONTINUAR MANEJO",
+      "fecha": "2023-10-01",
+      "texto_fuente": "CONTINUAR MANEJO",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0054": {
+      "ref": "NotasEvolucion#1073.Subjetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "fecha": "2023-10-02",
+      "texto_fuente": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0055": {
+      "ref": "NotasEvolucion#1073.Objetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "SIGNOS VITALES ESTABLES",
+      "fecha": "2023-10-02",
+      "texto_fuente": "SIGNOS VITALES ESTABLES",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0056": {
+      "ref": "NotasEvolucion#1073.Analisis",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "COLELITIASIS",
+      "fecha": "2023-10-02",
+      "texto_fuente": "COLELITIASIS",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0057": {
+      "ref": "NotasEvolucion#1073.Plan1",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "CONTINUAR MANEJO",
+      "fecha": "2023-10-02",
+      "texto_fuente": "CONTINUAR MANEJO",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0058": {
+      "ref": "NotaPostOperatoria#1004.complicaciones",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "NINGUNA",
+      "fecha": "2023-10-02",
+      "texto_fuente": "NINGUNA",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0059": {
+      "ref": "NotasEvolucion#1074.Subjetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "fecha": "2023-10-03",
+      "texto_fuente": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0060": {
+      "ref": "NotasEvolucion#1074.Objetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "SIGNOS VITALES ESTABLES",
+      "fecha": "2023-10-03",
+      "texto_fuente": "SIGNOS VITALES ESTABLES",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0061": {
+      "ref": "NotasEvolucion#1074.Analisis",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "COLELITIASIS",
+      "fecha": "2023-10-03",
+      "texto_fuente": "COLELITIASIS",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0062": {
+      "ref": "NotasEvolucion#1074.Plan1",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "CONTINUAR MANEJO",
+      "fecha": "2023-10-03",
+      "texto_fuente": "CONTINUAR MANEJO",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0063": {
+      "ref": "NotasEvolucion#1075.Subjetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "fecha": "2023-10-04",
+      "texto_fuente": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0064": {
+      "ref": "NotasEvolucion#1075.Objetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "SIGNOS VITALES ESTABLES",
+      "fecha": "2023-10-04",
+      "texto_fuente": "SIGNOS VITALES ESTABLES",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0065": {
+      "ref": "NotasEvolucion#1075.Analisis",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "COLELITIASIS",
+      "fecha": "2023-10-04",
+      "texto_fuente": "COLELITIASIS",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0066": {
+      "ref": "NotasEvolucion#1075.Plan1",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "CONTINUAR MANEJO",
+      "fecha": "2023-10-04",
+      "texto_fuente": "CONTINUAR MANEJO",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0067": {
+      "ref": "notaegreso#1014.Resumen",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "PACIENTE QUE INGRESA POR COLELITIASIS, EVOLUCIONA A LA MEJORIA.",
+      "fecha": "2023-10-05",
+      "texto_fuente": "PACIENTE QUE INGRESA POR COLELITIASIS, EVOLUCIONA A LA MEJORIA.",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0068": {
+      "ref": "NotaMedicaUrg#1062.MotivoConsulta",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "DESCONTROL GLUCEMICO",
+      "fecha": "2023-11-29",
+      "texto_fuente": "DESCONTROL GLUCEMICO",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0069": {
+      "ref": "NotaMedicaUrg#1062.Subjetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "REFIERE DOLOR DE INTENSIDAD 7/10. NIEGA ALERGIAS.",
+      "fecha": "2023-11-29",
+      "texto_fuente": "REFIERE DOLOR DE INTENSIDAD 7/10. NIEGA ALERGIAS.",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0070": {
+      "ref": "NotaMedicaUrg#1062.Objetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "CONSCIENTE, ORIENTADO, HIDRATADO.",
+      "fecha": "2023-11-29",
+      "texto_fuente": "CONSCIENTE, ORIENTADO, HIDRATADO.",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0071": {
+      "ref": "NotaMedicaUrg#1062.Apreciativo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "DIABETES MELLITUS TIPO 2 SIN COMPLICACIONES",
+      "fecha": "2023-11-29",
+      "texto_fuente": "DIABETES MELLITUS TIPO 2 SIN COMPLICACIONES",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0072": {
+      "ref": "NotaMedicaUrg#1062.Plan1",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "ANALGESIA Y VIGILANCIA",
+      "fecha": "2023-11-29",
+      "texto_fuente": "ANALGESIA Y VIGILANCIA",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0073": {
+      "ref": "NotaPostOperatoria#1004.descoper",
+      "refs_extra": [
+        "hosdcr#1004.Descripcion"
+      ],
+      "tipo": "procedimiento",
+      "valor": "COLECISTECTOMIA LAPAROSCOPICA",
+      "fecha": "2023-10-02",
+      "texto_fuente": "COLECISTECTOMIA LAPAROSCOPICA",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0074": {
+      "ref": "SignosVitales#1117.Temperatura",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Temperatura: 38.8 °C",
+      "fecha": "2023-05-23",
+      "texto_fuente": "Temperatura: 38.8 °C",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0075": {
+      "ref": "SignosVitales#1117.Pulso",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Frecuencia cardiaca: 108 lpm",
+      "fecha": "2023-05-23",
+      "texto_fuente": "Frecuencia cardiaca: 108 lpm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0076": {
+      "ref": "SignosVitales#1117.Frecuencia",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Frecuencia respiratoria: 24 rpm",
+      "fecha": "2023-05-23",
+      "texto_fuente": "Frecuencia respiratoria: 24 rpm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0077": {
+      "ref": "SignosVitales#1117.SatO2",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Saturación de O2: 95 %",
+      "fecha": "2023-05-23",
+      "texto_fuente": "Saturación de O2: 95 %",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0078": {
+      "ref": "SignosVitales#1117.Peso",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Peso: 82.4 kg",
+      "fecha": "2023-05-23",
+      "texto_fuente": "Peso: 82.4 kg",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0079": {
+      "ref": "SignosVitales#1117.Talla",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Talla: 151 cm",
+      "fecha": "2023-05-23",
+      "texto_fuente": "Talla: 151 cm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0080": {
+      "ref": "SignosVitales#1117.GlucemiaCapilar",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Glucosa capilar: 246 mg/dL",
+      "fecha": "2023-05-23",
+      "texto_fuente": "Glucosa capilar: 246 mg/dL",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0081": {
+      "ref": "SignosVitales#1117.PA_NoInvasiva1",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Presión arterial: 114/70 mmHg",
+      "fecha": "2023-05-23",
+      "texto_fuente": "Presión arterial: 114/70 mmHg",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0082": {
+      "ref": "SignosVitales#1118.Temperatura",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Temperatura: 36.1 °C",
+      "fecha": "2023-05-23",
+      "texto_fuente": "Temperatura: 36.1 °C",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0083": {
+      "ref": "SignosVitales#1118.Pulso",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Frecuencia cardiaca: 86 lpm",
+      "fecha": "2023-05-23",
+      "texto_fuente": "Frecuencia cardiaca: 86 lpm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0084": {
+      "ref": "SignosVitales#1118.Frecuencia",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Frecuencia respiratoria: 21 rpm",
+      "fecha": "2023-05-23",
+      "texto_fuente": "Frecuencia respiratoria: 21 rpm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0085": {
+      "ref": "SignosVitales#1118.SatO2",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Saturación de O2: 97 %",
+      "fecha": "2023-05-23",
+      "texto_fuente": "Saturación de O2: 97 %",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0086": {
+      "ref": "SignosVitales#1118.Peso",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Peso: 87.6 kg",
+      "fecha": "2023-05-23",
+      "texto_fuente": "Peso: 87.6 kg",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0087": {
+      "ref": "SignosVitales#1118.Talla",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Talla: 155 cm",
+      "fecha": "2023-05-23",
+      "texto_fuente": "Talla: 155 cm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0088": {
+      "ref": "SignosVitales#1118.GlucemiaCapilar",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Glucosa capilar: 144 mg/dL",
+      "fecha": "2023-05-23",
+      "texto_fuente": "Glucosa capilar: 144 mg/dL",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0089": {
+      "ref": "SignosVitales#1118.PA_NoInvasiva1",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Presión arterial: 116/81 mmHg",
+      "fecha": "2023-05-23",
+      "texto_fuente": "Presión arterial: 116/81 mmHg",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0090": {
+      "ref": "SignosVitales#1119.Temperatura",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Temperatura: 37 °C",
+      "fecha": "2023-07-26",
+      "texto_fuente": "Temperatura: 37 °C",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0091": {
+      "ref": "SignosVitales#1119.Pulso",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Frecuencia cardiaca: 98 lpm",
+      "fecha": "2023-07-26",
+      "texto_fuente": "Frecuencia cardiaca: 98 lpm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0092": {
+      "ref": "SignosVitales#1119.Frecuencia",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Frecuencia respiratoria: 17 rpm",
+      "fecha": "2023-07-26",
+      "texto_fuente": "Frecuencia respiratoria: 17 rpm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0093": {
+      "ref": "SignosVitales#1119.SatO2",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Saturación de O2: 94 %",
+      "fecha": "2023-07-26",
+      "texto_fuente": "Saturación de O2: 94 %",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0094": {
+      "ref": "SignosVitales#1119.Peso",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Peso: 73.7 kg",
+      "fecha": "2023-07-26",
+      "texto_fuente": "Peso: 73.7 kg",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0095": {
+      "ref": "SignosVitales#1119.Talla",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Talla: 165 cm",
+      "fecha": "2023-07-26",
+      "texto_fuente": "Talla: 165 cm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0096": {
+      "ref": "SignosVitales#1119.GlucemiaCapilar",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Glucosa capilar: 231 mg/dL",
+      "fecha": "2023-07-26",
+      "texto_fuente": "Glucosa capilar: 231 mg/dL",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0097": {
+      "ref": "SignosVitales#1119.PA_NoInvasiva1",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Presión arterial: 145/89 mmHg",
+      "fecha": "2023-07-26",
+      "texto_fuente": "Presión arterial: 145/89 mmHg",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0098": {
+      "ref": "SignosVitales#1120.Temperatura",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Temperatura: 36.1 °C",
+      "fecha": "2023-07-26",
+      "texto_fuente": "Temperatura: 36.1 °C",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0099": {
+      "ref": "SignosVitales#1120.Pulso",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Frecuencia cardiaca: 83 lpm",
+      "fecha": "2023-07-26",
+      "texto_fuente": "Frecuencia cardiaca: 83 lpm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0100": {
+      "ref": "SignosVitales#1120.Frecuencia",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Frecuencia respiratoria: 21 rpm",
+      "fecha": "2023-07-26",
+      "texto_fuente": "Frecuencia respiratoria: 21 rpm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0101": {
+      "ref": "SignosVitales#1120.SatO2",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Saturación de O2: 96 %",
+      "fecha": "2023-07-26",
+      "texto_fuente": "Saturación de O2: 96 %",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0102": {
+      "ref": "SignosVitales#1120.Peso",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Peso: 69.4 kg",
+      "fecha": "2023-07-26",
+      "texto_fuente": "Peso: 69.4 kg",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0103": {
+      "ref": "SignosVitales#1120.Talla",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Talla: 184 cm",
+      "fecha": "2023-07-26",
+      "texto_fuente": "Talla: 184 cm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0104": {
+      "ref": "SignosVitales#1120.GlucemiaCapilar",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Glucosa capilar: 219 mg/dL",
+      "fecha": "2023-07-26",
+      "texto_fuente": "Glucosa capilar: 219 mg/dL",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0105": {
+      "ref": "SignosVitales#1120.PA_NoInvasiva1",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Presión arterial: 128/76 mmHg",
+      "fecha": "2023-07-26",
+      "texto_fuente": "Presión arterial: 128/76 mmHg",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0106": {
+      "ref": "SignosVitales#1121.Temperatura",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Temperatura: 36.9 °C",
+      "fecha": "2023-09-22",
+      "texto_fuente": "Temperatura: 36.9 °C",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0107": {
+      "ref": "SignosVitales#1121.Pulso",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Frecuencia cardiaca: 85 lpm",
+      "fecha": "2023-09-22",
+      "texto_fuente": "Frecuencia cardiaca: 85 lpm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0108": {
+      "ref": "SignosVitales#1121.Frecuencia",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Frecuencia respiratoria: 23 rpm",
+      "fecha": "2023-09-22",
+      "texto_fuente": "Frecuencia respiratoria: 23 rpm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0109": {
+      "ref": "SignosVitales#1121.SatO2",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Saturación de O2: 91 %",
+      "fecha": "2023-09-22",
+      "texto_fuente": "Saturación de O2: 91 %",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0110": {
+      "ref": "SignosVitales#1121.Peso",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Peso: 88.7 kg",
+      "fecha": "2023-09-22",
+      "texto_fuente": "Peso: 88.7 kg",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0111": {
+      "ref": "SignosVitales#1121.Talla",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Talla: 151 cm",
+      "fecha": "2023-09-22",
+      "texto_fuente": "Talla: 151 cm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0112": {
+      "ref": "SignosVitales#1121.GlucemiaCapilar",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Glucosa capilar: 231 mg/dL",
+      "fecha": "2023-09-22",
+      "texto_fuente": "Glucosa capilar: 231 mg/dL",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0113": {
+      "ref": "SignosVitales#1121.PA_NoInvasiva1",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Presión arterial: 129/69 mmHg",
+      "fecha": "2023-09-22",
+      "texto_fuente": "Presión arterial: 129/69 mmHg",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0114": {
+      "ref": "SignosVitales#1122.Temperatura",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Temperatura: 38.5 °C",
+      "fecha": "2023-09-22",
+      "texto_fuente": "Temperatura: 38.5 °C",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0115": {
+      "ref": "SignosVitales#1122.Pulso",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Frecuencia cardiaca: 99 lpm",
+      "fecha": "2023-09-22",
+      "texto_fuente": "Frecuencia cardiaca: 99 lpm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0116": {
+      "ref": "SignosVitales#1122.Frecuencia",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Frecuencia respiratoria: 20 rpm",
+      "fecha": "2023-09-22",
+      "texto_fuente": "Frecuencia respiratoria: 20 rpm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0117": {
+      "ref": "SignosVitales#1122.SatO2",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Saturación de O2: 94 %",
+      "fecha": "2023-09-22",
+      "texto_fuente": "Saturación de O2: 94 %",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0118": {
+      "ref": "SignosVitales#1122.Peso",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Peso: 59.7 kg",
+      "fecha": "2023-09-22",
+      "texto_fuente": "Peso: 59.7 kg",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0119": {
+      "ref": "SignosVitales#1122.Talla",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Talla: 152 cm",
+      "fecha": "2023-09-22",
+      "texto_fuente": "Talla: 152 cm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0120": {
+      "ref": "SignosVitales#1122.GlucemiaCapilar",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Glucosa capilar: 211 mg/dL",
+      "fecha": "2023-09-22",
+      "texto_fuente": "Glucosa capilar: 211 mg/dL",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0121": {
+      "ref": "SignosVitales#1122.PA_NoInvasiva1",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Presión arterial: 146/66 mmHg",
+      "fecha": "2023-09-22",
+      "texto_fuente": "Presión arterial: 146/66 mmHg",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0122": {
+      "ref": "SignosVitales#1123.Temperatura",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Temperatura: 37.7 °C",
+      "fecha": "2023-11-29",
+      "texto_fuente": "Temperatura: 37.7 °C",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0123": {
+      "ref": "SignosVitales#1123.Pulso",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Frecuencia cardiaca: 105 lpm",
+      "fecha": "2023-11-29",
+      "texto_fuente": "Frecuencia cardiaca: 105 lpm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0124": {
+      "ref": "SignosVitales#1123.Frecuencia",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Frecuencia respiratoria: 24 rpm",
+      "fecha": "2023-11-29",
+      "texto_fuente": "Frecuencia respiratoria: 24 rpm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0125": {
+      "ref": "SignosVitales#1123.SatO2",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Saturación de O2: 91 %",
+      "fecha": "2023-11-29",
+      "texto_fuente": "Saturación de O2: 91 %",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0126": {
+      "ref": "SignosVitales#1123.Peso",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Peso: 64.1 kg",
+      "fecha": "2023-11-29",
+      "texto_fuente": "Peso: 64.1 kg",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0127": {
+      "ref": "SignosVitales#1123.Talla",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Talla: 173 cm",
+      "fecha": "2023-11-29",
+      "texto_fuente": "Talla: 173 cm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0128": {
+      "ref": "SignosVitales#1123.GlucemiaCapilar",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Glucosa capilar: 207 mg/dL",
+      "fecha": "2023-11-29",
+      "texto_fuente": "Glucosa capilar: 207 mg/dL",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0129": {
+      "ref": "SignosVitales#1123.PA_NoInvasiva1",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Presión arterial: 148/93 mmHg",
+      "fecha": "2023-11-29",
+      "texto_fuente": "Presión arterial: 148/93 mmHg",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0130": {
+      "ref": "SignosVitales#1124.Temperatura",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Temperatura: 37.8 °C",
+      "fecha": "2023-11-29",
+      "texto_fuente": "Temperatura: 37.8 °C",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0131": {
+      "ref": "SignosVitales#1124.Pulso",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Frecuencia cardiaca: 76 lpm",
+      "fecha": "2023-11-29",
+      "texto_fuente": "Frecuencia cardiaca: 76 lpm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0132": {
+      "ref": "SignosVitales#1124.Frecuencia",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Frecuencia respiratoria: 16 rpm",
+      "fecha": "2023-11-29",
+      "texto_fuente": "Frecuencia respiratoria: 16 rpm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0133": {
+      "ref": "SignosVitales#1124.SatO2",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Saturación de O2: 90 %",
+      "fecha": "2023-11-29",
+      "texto_fuente": "Saturación de O2: 90 %",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0134": {
+      "ref": "SignosVitales#1124.Peso",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Peso: 73.1 kg",
+      "fecha": "2023-11-29",
+      "texto_fuente": "Peso: 73.1 kg",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0135": {
+      "ref": "SignosVitales#1124.Talla",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Talla: 154 cm",
+      "fecha": "2023-11-29",
+      "texto_fuente": "Talla: 154 cm",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0136": {
+      "ref": "SignosVitales#1124.GlucemiaCapilar",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Glucosa capilar: 257 mg/dL",
+      "fecha": "2023-11-29",
+      "texto_fuente": "Glucosa capilar: 257 mg/dL",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0137": {
+      "ref": "SignosVitales#1124.PA_NoInvasiva1",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Presión arterial: 116/86 mmHg",
+      "fecha": "2023-11-29",
+      "texto_fuente": "Presión arterial: 116/86 mmHg",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    },
+    "H-0138": {
+      "ref": "historiaclinica#1024.TipoSangre",
+      "refs_extra": [],
+      "tipo": "tipo_sangre",
+      "valor": "A +",
+      "fecha": "2023-03-15",
+      "texto_fuente": "A +",
+      "certeza": "afirmado",
+      "expediente": "100022"
+    }
+  }
+}

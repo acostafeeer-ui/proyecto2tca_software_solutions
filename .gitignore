@@ -1,0 +1,8 @@
+.env
+datos/
+datos_demo/
+*.duckdb
+*.duckdb.wal
+resultados/
+__pycache__/
+.venv/

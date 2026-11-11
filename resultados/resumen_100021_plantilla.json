@@ -1,0 +1,1232 @@
+{
+  "expediente": "100021",
+  "fecha_cita": "2026-11-10",
+  "generado": "2026-11-10T19:13:11",
+  "modo": "plantilla",
+  "encabezado": {
+    "sexo": "F",
+    "edad": "59",
+    "tipo_sangre": "B +",
+    "ultima_atencion": "Egreso: MEJORIA (7 días de estancia) (2024-01-19).",
+    "refs": [
+      "H-0010",
+      "H-0013",
+      "H-0088",
+      "H-0009"
+    ]
+  },
+  "alergias": {
+    "estado": "documentada",
+    "afirmadas": [
+      "REFIERE ALERGIA A PENICILINA. (2023-06-26).",
+      "Alergias: PENICILINA (2023-06-26)."
+    ],
+    "hechos": [
+      "H-0001",
+      "H-0002"
+    ]
+  },
+  "alertas": [
+    {
+      "regla": "C01",
+      "severidad": "alta",
+      "mensaje": "Sexo registrado distinto entre registros: F vs M.",
+      "hechos": [
+        "H-0010",
+        "H-0012"
+      ],
+      "pregunta": "Confirmar el sexo del paciente y corregir el registro."
+    }
+  ],
+  "secciones": [
+    {
+      "titulo": "Problemas activos",
+      "frases": [
+        {
+          "texto": "HIPERTENSION ARTERIAL SISTEMICA, CIE-10 I10 (desde 2024-01-12, último registro 2024-01-19).",
+          "refs": [
+            "H-0017"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "NEUMONIA NO ESPECIFICADA, CIE-10 J18.9 (2023-09-12).",
+          "refs": [
+            "H-0016"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "ENFERMEDAD PULMONAR OBSTRUCTIVA CRONICA, CIE-10 J44.9 (2023-06-26).",
+          "refs": [
+            "H-0014"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "COLELITIASIS, CIE-10 K80.2 (2023-06-26).",
+          "refs": [
+            "H-0015"
+          ],
+          "estado": "verificada"
+        }
+      ]
+    },
+    {
+      "titulo": "Medicamentos recientes",
+      "frases": [
+        {
+          "texto": "CEFTRIAXONA: 1 G, INTRAVENOSA, cada 12 HORAS, 7 DIAS (2024-01-19).",
+          "refs": [
+            "H-0028"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "OMEPRAZOL: 40 MG, INTRAVENOSA, cada 24 HORAS, 7 DIAS (2024-01-19).",
+          "refs": [
+            "H-0029"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "METFORMINA: 850 MG, ORAL, 12 HORAS, estatus ACTIVA (2024-01-12).",
+          "refs": [
+            "H-0025"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "PARACETAMOL: 1 G, INTRAVENOSA, 8 HORAS, estatus ACTIVA (2024-01-12).",
+          "refs": [
+            "H-0026"
+          ],
+          "estado": "verificada"
+        }
+      ]
+    },
+    {
+      "titulo": "Antecedentes personales y quirúrgicos",
+      "frases": [
+        {
+          "texto": "COLECISTECTOMIA LAPAROSCOPICA (2024-01-13).",
+          "refs": [
+            "H-0071"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Quirurgicos: COLECISTECTOMIA 2019 (2023-06-26).",
+          "refs": [
+            "H-0005"
+          ],
+          "estado": "verificada"
+        }
+      ]
+    },
+    {
+      "titulo": "Antecedentes familiares",
+      "frases": [
+        {
+          "texto": "Diabetes: MADRE (2023-06-26).",
+          "refs": [
+            "H-0003"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Hipertension (2023-06-26).",
+          "refs": [
+            "H-0004"
+          ],
+          "estado": "verificada"
+        }
+      ]
+    },
+    {
+      "titulo": "Gineco-obstétricos",
+      "frases": [
+        {
+          "texto": "Embarazos: 2 (2023-06-26).",
+          "refs": [
+            "H-0019"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Partos: 2 (2023-06-26).",
+          "refs": [
+            "H-0020"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Cesareas: 0 (2023-06-26).",
+          "refs": [
+            "H-0021"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Abortos: 0 (2023-06-26).",
+          "refs": [
+            "H-0022"
+          ],
+          "estado": "verificada"
+        }
+      ]
+    },
+    {
+      "titulo": "Hábitos y factores de riesgo",
+      "frases": [
+        {
+          "texto": "Alcohol: OCASIONAL (2023-06-26).",
+          "refs": [
+            "H-0023"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Fumador: SI (2023-06-26).",
+          "refs": [
+            "H-0024"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "IMC calculado 19.0 (normal) con peso 62.2 kg y talla 181 cm.",
+          "refs": [
+            "H-0076",
+            "H-0077"
+          ],
+          "estado": "verificada"
+        }
+      ]
+    },
+    {
+      "titulo": "Últimas atenciones",
+      "frases": [
+        {
+          "texto": "Egreso: MEJORIA (7 días de estancia) (2024-01-19).",
+          "refs": [
+            "H-0009"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Hospitalización: DESCONTROL GLUCEMICO (2024-01-12).",
+          "refs": [
+            "H-0008"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Urgencias: FIEBRE Y TOS PRODUCTIVA (triage 2, destino HOSPITALIZACION) (2023-09-12).",
+          "refs": [
+            "H-0007"
+          ],
+          "estado": "verificada"
+        }
+      ]
+    },
+    {
+      "titulo": "Estudios y signos vitales recientes",
+      "frases": [
+        {
+          "texto": "BIOMETRIA HEMATICA: LEUCOCITOS 13,500. QUIMICA SANGUINEA: GLUCOSA 210 MG/DL. (2024-01-12).",
+          "refs": [
+            "H-0018"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Temperatura: 37 °C (2023-09-12).",
+          "refs": [
+            "H-0072"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Frecuencia cardiaca: 74 lpm (2023-09-12).",
+          "refs": [
+            "H-0073"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Frecuencia respiratoria: 20 rpm (2023-09-12).",
+          "refs": [
+            "H-0074"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Saturación de O2: 98 % (2023-09-12).",
+          "refs": [
+            "H-0075"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Glucosa capilar: 245 mg/dL (fuera de rango) (2023-09-12).",
+          "refs": [
+            "H-0078"
+          ],
+          "estado": "verificada"
+        },
+        {
+          "texto": "Presión arterial: 123/93 mmHg (2023-09-12).",
+          "refs": [
+            "H-0079"
+          ],
+          "estado": "verificada"
+        }
+      ]
+    }
+  ],
+  "fidelidad": {
+    "verificadas": 29,
+    "reescritas": 0,
+    "eliminadas": 0
+  },
+  "auditoria": [],
+  "estadisticas": {
+    "hechos": 88,
+    "registros_fuente": 133,
+    "duplicados_colapsados": 45,
+    "segundos": 0.06,
+    "llm": {}
+  },
+  "evidencia": {
+    "H-0001": {
+      "ref": "historiaclinica#1023.Interrogatorio",
+      "refs_extra": [],
+      "tipo": "alergia",
+      "valor": "REFIERE ALERGIA A PENICILINA.",
+      "fecha": "2023-06-26",
+      "texto_fuente": "REFIERE ALERGIA A PENICILINA.",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0002": {
+      "ref": "historiaclinica#1023.PP_Alergias",
+      "refs_extra": [],
+      "tipo": "alergia",
+      "valor": "Alergias: PENICILINA",
+      "fecha": "2023-06-26",
+      "texto_fuente": "Alergias: PENICILINA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0003": {
+      "ref": "historiaclinica#1023.HF_Diabetes",
+      "refs_extra": [],
+      "tipo": "antecedente_familiar",
+      "valor": "Diabetes: MADRE",
+      "fecha": "2023-06-26",
+      "texto_fuente": "Diabetes: MADRE",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0004": {
+      "ref": "historiaclinica#1023.HF_Hipertension",
+      "refs_extra": [],
+      "tipo": "antecedente_familiar",
+      "valor": "Hipertension",
+      "fecha": "2023-06-26",
+      "texto_fuente": "Hipertension: SI",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0005": {
+      "ref": "historiaclinica#1023.PP_Quirurgicos",
+      "refs_extra": [],
+      "tipo": "antecedente_personal",
+      "valor": "Quirurgicos: COLECISTECTOMIA 2019",
+      "fecha": "2023-06-26",
+      "texto_fuente": "Quirurgicos: COLECISTECTOMIA 2019",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0006": {
+      "ref": "historiaclinica#1023.PP_Transfusionales",
+      "refs_extra": [],
+      "tipo": "antecedente_personal",
+      "valor": "Transfusionales: NEGADOS",
+      "fecha": "2023-06-26",
+      "texto_fuente": "Transfusionales: NEGADOS",
+      "certeza": "negado",
+      "expediente": "100021"
+    },
+    "H-0007": {
+      "ref": "NotaMedicaUrg#1058.MotivoConsulta",
+      "refs_extra": [],
+      "tipo": "atencion",
+      "valor": "Urgencias: FIEBRE Y TOS PRODUCTIVA",
+      "fecha": "2023-09-12",
+      "texto_fuente": "Urgencias: FIEBRE Y TOS PRODUCTIVA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0008": {
+      "ref": "NotaIngreso_HC#1014.MotivoIngreso",
+      "refs_extra": [],
+      "tipo": "atencion",
+      "valor": "Hospitalización: DESCONTROL GLUCEMICO",
+      "fecha": "2024-01-12",
+      "texto_fuente": "Hospitalización: DESCONTROL GLUCEMICO",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0009": {
+      "ref": "notaegreso#1013.MotivoEgreso",
+      "refs_extra": [],
+      "tipo": "atencion",
+      "valor": "Egreso: MEJORIA",
+      "fecha": "2024-01-19",
+      "texto_fuente": "Egreso: MEJORIA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0010": {
+      "ref": "historiaclinica#1023.Sexo",
+      "refs_extra": [
+        "Indicaciones#1053.Sexo",
+        "Indicaciones#1054.Sexo",
+        "Indicaciones#1055.Sexo",
+        "Indicaciones#1056.Sexo",
+        "NotaIngreso_HC#1014.Sexo",
+        "NotaPostOperatoria#1003.Sexo",
+        "NotasEvolucion#1065.Sexo",
+        "NotasEvolucion#1066.Sexo",
+        "NotasEvolucion#1067.Sexo",
+        "NotasEvolucion#1068.Sexo",
+        "NotasEvolucion#1069.Sexo",
+        "NotasEvolucion#1070.Sexo",
+        "NotasEvolucion#1071.Sexo",
+        "Recetas#1014.Sexo",
+        "SignosVitales#1115.Sexo",
+        "SignosVitales#1116.Sexo",
+        "notaegreso#1013.Sexo"
+      ],
+      "tipo": "demografico",
+      "valor": "F",
+      "fecha": "2023-06-26",
+      "texto_fuente": "F",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0011": {
+      "ref": "historiaclinica#1023.Edad",
+      "refs_extra": [
+        "NotaMedicaUrg#1058.Edad",
+        "SignosVitales#1115.Edad",
+        "SignosVitales#1116.Edad"
+      ],
+      "tipo": "demografico",
+      "valor": "58",
+      "fecha": "2023-06-26",
+      "texto_fuente": "58",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0012": {
+      "ref": "NotaMedicaUrg#1058.Sexo",
+      "refs_extra": [],
+      "tipo": "demografico",
+      "valor": "M",
+      "fecha": "2023-09-12",
+      "texto_fuente": "M",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0013": {
+      "ref": "NotaIngreso_HC#1014.Edad",
+      "refs_extra": [
+        "Indicaciones#1053.Edad",
+        "Indicaciones#1054.Edad",
+        "Indicaciones#1055.Edad",
+        "Indicaciones#1056.Edad",
+        "NotaPostOperatoria#1003.Edad",
+        "NotasEvolucion#1065.Edad",
+        "NotasEvolucion#1066.Edad",
+        "NotasEvolucion#1067.Edad",
+        "NotasEvolucion#1068.Edad",
+        "NotasEvolucion#1069.Edad",
+        "NotasEvolucion#1070.Edad",
+        "NotasEvolucion#1071.Edad",
+        "Recetas#1014.Edad",
+        "notaegreso#1013.Edad"
+      ],
+      "tipo": "demografico",
+      "valor": "59",
+      "fecha": "2024-01-12",
+      "texto_fuente": "59",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0014": {
+      "ref": "historiaclinica#1023.Desdiag1",
+      "refs_extra": [],
+      "tipo": "diagnostico",
+      "valor": "ENFERMEDAD PULMONAR OBSTRUCTIVA CRONICA",
+      "fecha": "2023-06-26",
+      "texto_fuente": "ENFERMEDAD PULMONAR OBSTRUCTIVA CRONICA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0015": {
+      "ref": "historiaclinica#1023.Desdiag2",
+      "refs_extra": [],
+      "tipo": "diagnostico",
+      "valor": "COLELITIASIS",
+      "fecha": "2023-06-26",
+      "texto_fuente": "COLELITIASIS",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0016": {
+      "ref": "NotaMedicaUrg#1058.DesDiag1",
+      "refs_extra": [],
+      "tipo": "diagnostico",
+      "valor": "NEUMONIA NO ESPECIFICADA",
+      "fecha": "2023-09-12",
+      "texto_fuente": "NEUMONIA NO ESPECIFICADA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0017": {
+      "ref": "NotaIngreso_HC#1014.desdiag1",
+      "refs_extra": [
+        "NotaIngreso_HC#1014.DiagnosticoDesc",
+        "NotasEvolucion#1065.desdiag1",
+        "NotasEvolucion#1066.desdiag1",
+        "NotasEvolucion#1067.desdiag1",
+        "NotasEvolucion#1068.desdiag1",
+        "NotasEvolucion#1069.desdiag1",
+        "NotasEvolucion#1070.desdiag1",
+        "NotasEvolucion#1071.desdiag1",
+        "Recetas#1014.desdiag",
+        "notaegreso#1013.DescDiag1"
+      ],
+      "tipo": "diagnostico",
+      "valor": "HIPERTENSION ARTERIAL SISTEMICA",
+      "fecha": "2024-01-12",
+      "texto_fuente": "HIPERTENSION ARTERIAL SISTEMICA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0018": {
+      "ref": "NotaIngreso_HC#1014.EstudiosRealizados",
+      "refs_extra": [],
+      "tipo": "estudio",
+      "valor": "BIOMETRIA HEMATICA: LEUCOCITOS 13,500. QUIMICA SANGUINEA: GLUCOSA 210 MG/DL.",
+      "fecha": "2024-01-12",
+      "texto_fuente": "BIOMETRIA HEMATICA: LEUCOCITOS 13,500. QUIMICA SANGUINEA: GLUCOSA 210 MG/DL.",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0019": {
+      "ref": "historiaclinica#1023.Embarazos",
+      "refs_extra": [],
+      "tipo": "gineco",
+      "valor": "Embarazos: 2",
+      "fecha": "2023-06-26",
+      "texto_fuente": "Embarazos: 2",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0020": {
+      "ref": "historiaclinica#1023.Partos",
+      "refs_extra": [],
+      "tipo": "gineco",
+      "valor": "Partos: 2",
+      "fecha": "2023-06-26",
+      "texto_fuente": "Partos: 2",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0021": {
+      "ref": "historiaclinica#1023.Cesareas",
+      "refs_extra": [],
+      "tipo": "gineco",
+      "valor": "Cesareas: 0",
+      "fecha": "2023-06-26",
+      "texto_fuente": "Cesareas: 0",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0022": {
+      "ref": "historiaclinica#1023.Abortos",
+      "refs_extra": [],
+      "tipo": "gineco",
+      "valor": "Abortos: 0",
+      "fecha": "2023-06-26",
+      "texto_fuente": "Abortos: 0",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0023": {
+      "ref": "historiaclinica#1023.Alcohol",
+      "refs_extra": [],
+      "tipo": "habito",
+      "valor": "Alcohol: OCASIONAL",
+      "fecha": "2023-06-26",
+      "texto_fuente": "Alcohol: OCASIONAL",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0024": {
+      "ref": "historiaclinica#1023.Fumador",
+      "refs_extra": [],
+      "tipo": "habito",
+      "valor": "Fumador: SI",
+      "fecha": "2023-06-26",
+      "texto_fuente": "Fumador: SI",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0025": {
+      "ref": "Indicaciones#1053.Articulo",
+      "refs_extra": [],
+      "tipo": "medicamento",
+      "valor": "METFORMINA",
+      "fecha": "2024-01-12",
+      "texto_fuente": "METFORMINA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0026": {
+      "ref": "Indicaciones#1054.Articulo",
+      "refs_extra": [],
+      "tipo": "medicamento",
+      "valor": "PARACETAMOL",
+      "fecha": "2024-01-12",
+      "texto_fuente": "PARACETAMOL",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0027": {
+      "ref": "Indicaciones#1055.Articulo",
+      "refs_extra": [],
+      "tipo": "medicamento",
+      "valor": "CEFTRIAXONA",
+      "fecha": "2024-01-12",
+      "texto_fuente": "CEFTRIAXONA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0028": {
+      "ref": "RecetasDet#1027.Desc_Generica",
+      "refs_extra": [],
+      "tipo": "medicamento",
+      "valor": "CEFTRIAXONA",
+      "fecha": "2024-01-19",
+      "texto_fuente": "CEFTRIAXONA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0029": {
+      "ref": "RecetasDet#1028.Desc_Generica",
+      "refs_extra": [],
+      "tipo": "medicamento",
+      "valor": "OMEPRAZOL",
+      "fecha": "2024-01-19",
+      "texto_fuente": "OMEPRAZOL",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0030": {
+      "ref": "historiaclinica#1023.Interrogatorio",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "PACIENTE FEMENINO DE 58 AÑOS. REFIERE ALERGIA A PENICILINA.",
+      "fecha": "2023-06-26",
+      "texto_fuente": "PACIENTE FEMENINO DE 58 AÑOS. REFIERE ALERGIA A PENICILINA.",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0031": {
+      "ref": "historiaclinica#1023.MotivoConsulta",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "CEFALEA INTENSA",
+      "fecha": "2023-06-26",
+      "texto_fuente": "CEFALEA INTENSA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0032": {
+      "ref": "historiaclinica#1023.MedicamentosActuales",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "ENFERMEDAD PULMONAR EN TRATAMIENTO",
+      "fecha": "2023-06-26",
+      "texto_fuente": "ENFERMEDAD PULMONAR EN TRATAMIENTO",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0033": {
+      "ref": "NotaMedicaUrg#1058.MotivoConsulta",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "FIEBRE Y TOS PRODUCTIVA",
+      "fecha": "2023-09-12",
+      "texto_fuente": "FIEBRE Y TOS PRODUCTIVA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0034": {
+      "ref": "NotaMedicaUrg#1058.Subjetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "REFIERE DOLOR DE INTENSIDAD 7/10.",
+      "fecha": "2023-09-12",
+      "texto_fuente": "REFIERE DOLOR DE INTENSIDAD 7/10.",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0035": {
+      "ref": "NotaMedicaUrg#1058.Objetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "CONSCIENTE, ORIENTADO, HIDRATADO.",
+      "fecha": "2023-09-12",
+      "texto_fuente": "CONSCIENTE, ORIENTADO, HIDRATADO.",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0036": {
+      "ref": "NotaMedicaUrg#1058.Apreciativo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "NEUMONIA NO ESPECIFICADA",
+      "fecha": "2023-09-12",
+      "texto_fuente": "NEUMONIA NO ESPECIFICADA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0037": {
+      "ref": "NotaMedicaUrg#1058.Plan1",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "ANALGESIA Y VIGILANCIA",
+      "fecha": "2023-09-12",
+      "texto_fuente": "ANALGESIA Y VIGILANCIA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0038": {
+      "ref": "NotaIngreso_HC#1014.MotivoIngreso",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "DESCONTROL GLUCEMICO",
+      "fecha": "2024-01-12",
+      "texto_fuente": "DESCONTROL GLUCEMICO",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0039": {
+      "ref": "NotaIngreso_HC#1014.Antecedentes",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "SIN ANTECEDENTES DE IMPORTANCIA",
+      "fecha": "2024-01-12",
+      "texto_fuente": "SIN ANTECEDENTES DE IMPORTANCIA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0040": {
+      "ref": "NotaIngreso_HC#1014.EstudiosRealizados",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "BIOMETRIA HEMATICA: LEUCOCITOS 13,500. QUIMICA SANGUINEA: GLUCOSA 210 MG/DL.",
+      "fecha": "2024-01-12",
+      "texto_fuente": "BIOMETRIA HEMATICA: LEUCOCITOS 13,500. QUIMICA SANGUINEA: GLUCOSA 210 MG/DL.",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0041": {
+      "ref": "NotasEvolucion#1065.Subjetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "fecha": "2024-01-12",
+      "texto_fuente": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0042": {
+      "ref": "NotasEvolucion#1065.Objetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "SIGNOS VITALES ESTABLES",
+      "fecha": "2024-01-12",
+      "texto_fuente": "SIGNOS VITALES ESTABLES",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0043": {
+      "ref": "NotasEvolucion#1065.Analisis",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "HIPERTENSION ARTERIAL SISTEMICA",
+      "fecha": "2024-01-12",
+      "texto_fuente": "HIPERTENSION ARTERIAL SISTEMICA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0044": {
+      "ref": "NotasEvolucion#1065.Plan1",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "CONTINUAR MANEJO",
+      "fecha": "2024-01-12",
+      "texto_fuente": "CONTINUAR MANEJO",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0045": {
+      "ref": "NotasEvolucion#1066.Subjetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "fecha": "2024-01-13",
+      "texto_fuente": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0046": {
+      "ref": "NotasEvolucion#1066.Objetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "SIGNOS VITALES ESTABLES",
+      "fecha": "2024-01-13",
+      "texto_fuente": "SIGNOS VITALES ESTABLES",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0047": {
+      "ref": "NotasEvolucion#1066.Analisis",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "HIPERTENSION ARTERIAL SISTEMICA",
+      "fecha": "2024-01-13",
+      "texto_fuente": "HIPERTENSION ARTERIAL SISTEMICA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0048": {
+      "ref": "NotasEvolucion#1066.Plan1",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "CONTINUAR MANEJO",
+      "fecha": "2024-01-13",
+      "texto_fuente": "CONTINUAR MANEJO",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0049": {
+      "ref": "NotaPostOperatoria#1003.complicaciones",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "NINGUNA",
+      "fecha": "2024-01-13",
+      "texto_fuente": "NINGUNA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0050": {
+      "ref": "NotasEvolucion#1067.Subjetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "fecha": "2024-01-14",
+      "texto_fuente": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0051": {
+      "ref": "NotasEvolucion#1067.Objetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "SIGNOS VITALES ESTABLES",
+      "fecha": "2024-01-14",
+      "texto_fuente": "SIGNOS VITALES ESTABLES",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0052": {
+      "ref": "NotasEvolucion#1067.Analisis",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "HIPERTENSION ARTERIAL SISTEMICA",
+      "fecha": "2024-01-14",
+      "texto_fuente": "HIPERTENSION ARTERIAL SISTEMICA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0053": {
+      "ref": "NotasEvolucion#1067.Plan1",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "CONTINUAR MANEJO",
+      "fecha": "2024-01-14",
+      "texto_fuente": "CONTINUAR MANEJO",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0054": {
+      "ref": "NotasEvolucion#1068.Subjetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "fecha": "2024-01-15",
+      "texto_fuente": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0055": {
+      "ref": "NotasEvolucion#1068.Objetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "SIGNOS VITALES ESTABLES",
+      "fecha": "2024-01-15",
+      "texto_fuente": "SIGNOS VITALES ESTABLES",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0056": {
+      "ref": "NotasEvolucion#1068.Analisis",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "HIPERTENSION ARTERIAL SISTEMICA",
+      "fecha": "2024-01-15",
+      "texto_fuente": "HIPERTENSION ARTERIAL SISTEMICA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0057": {
+      "ref": "NotasEvolucion#1068.Plan1",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "CONTINUAR MANEJO",
+      "fecha": "2024-01-15",
+      "texto_fuente": "CONTINUAR MANEJO",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0058": {
+      "ref": "NotasEvolucion#1069.Subjetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "fecha": "2024-01-16",
+      "texto_fuente": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0059": {
+      "ref": "NotasEvolucion#1069.Objetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "SIGNOS VITALES ESTABLES",
+      "fecha": "2024-01-16",
+      "texto_fuente": "SIGNOS VITALES ESTABLES",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0060": {
+      "ref": "NotasEvolucion#1069.Analisis",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "HIPERTENSION ARTERIAL SISTEMICA",
+      "fecha": "2024-01-16",
+      "texto_fuente": "HIPERTENSION ARTERIAL SISTEMICA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0061": {
+      "ref": "NotasEvolucion#1069.Plan1",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "CONTINUAR MANEJO",
+      "fecha": "2024-01-16",
+      "texto_fuente": "CONTINUAR MANEJO",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0062": {
+      "ref": "NotasEvolucion#1070.Subjetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "fecha": "2024-01-17",
+      "texto_fuente": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0063": {
+      "ref": "NotasEvolucion#1070.Objetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "SIGNOS VITALES ESTABLES",
+      "fecha": "2024-01-17",
+      "texto_fuente": "SIGNOS VITALES ESTABLES",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0064": {
+      "ref": "NotasEvolucion#1070.Analisis",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "HIPERTENSION ARTERIAL SISTEMICA",
+      "fecha": "2024-01-17",
+      "texto_fuente": "HIPERTENSION ARTERIAL SISTEMICA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0065": {
+      "ref": "NotasEvolucion#1070.Plan1",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "CONTINUAR MANEJO",
+      "fecha": "2024-01-17",
+      "texto_fuente": "CONTINUAR MANEJO",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0066": {
+      "ref": "NotasEvolucion#1071.Subjetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "fecha": "2024-01-18",
+      "texto_fuente": "PACIENTE ESTABLE, TOLERA VIA ORAL. SIN FIEBRE EN LAS ULTIMAS 24 HORAS.",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0067": {
+      "ref": "NotasEvolucion#1071.Objetivo",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "SIGNOS VITALES ESTABLES",
+      "fecha": "2024-01-18",
+      "texto_fuente": "SIGNOS VITALES ESTABLES",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0068": {
+      "ref": "NotasEvolucion#1071.Analisis",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "HIPERTENSION ARTERIAL SISTEMICA",
+      "fecha": "2024-01-18",
+      "texto_fuente": "HIPERTENSION ARTERIAL SISTEMICA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0069": {
+      "ref": "NotasEvolucion#1071.Plan1",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "CONTINUAR MANEJO",
+      "fecha": "2024-01-18",
+      "texto_fuente": "CONTINUAR MANEJO",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0070": {
+      "ref": "notaegreso#1013.Resumen",
+      "refs_extra": [],
+      "tipo": "nota",
+      "valor": "PACIENTE QUE INGRESA POR HIPERTENSION ARTERIAL SISTEMICA, EVOLUCIONA A LA MEJORIA.",
+      "fecha": "2024-01-19",
+      "texto_fuente": "PACIENTE QUE INGRESA POR HIPERTENSION ARTERIAL SISTEMICA, EVOLUCIONA A LA MEJORIA.",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0071": {
+      "ref": "NotaPostOperatoria#1003.descoper",
+      "refs_extra": [
+        "hosdcr#1003.Descripcion"
+      ],
+      "tipo": "procedimiento",
+      "valor": "COLECISTECTOMIA LAPAROSCOPICA",
+      "fecha": "2024-01-13",
+      "texto_fuente": "COLECISTECTOMIA LAPAROSCOPICA",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0072": {
+      "ref": "SignosVitales#1115.Temperatura",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Temperatura: 37 °C",
+      "fecha": "2023-09-12",
+      "texto_fuente": "Temperatura: 37 °C",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0073": {
+      "ref": "SignosVitales#1115.Pulso",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Frecuencia cardiaca: 74 lpm",
+      "fecha": "2023-09-12",
+      "texto_fuente": "Frecuencia cardiaca: 74 lpm",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0074": {
+      "ref": "SignosVitales#1115.Frecuencia",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Frecuencia respiratoria: 20 rpm",
+      "fecha": "2023-09-12",
+      "texto_fuente": "Frecuencia respiratoria: 20 rpm",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0075": {
+      "ref": "SignosVitales#1115.SatO2",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Saturación de O2: 98 %",
+      "fecha": "2023-09-12",
+      "texto_fuente": "Saturación de O2: 98 %",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0076": {
+      "ref": "SignosVitales#1115.Peso",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Peso: 62.2 kg",
+      "fecha": "2023-09-12",
+      "texto_fuente": "Peso: 62.2 kg",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0077": {
+      "ref": "SignosVitales#1115.Talla",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Talla: 181 cm",
+      "fecha": "2023-09-12",
+      "texto_fuente": "Talla: 181 cm",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0078": {
+      "ref": "SignosVitales#1115.GlucemiaCapilar",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Glucosa capilar: 245 mg/dL",
+      "fecha": "2023-09-12",
+      "texto_fuente": "Glucosa capilar: 245 mg/dL",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0079": {
+      "ref": "SignosVitales#1115.PA_NoInvasiva1",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Presión arterial: 123/93 mmHg",
+      "fecha": "2023-09-12",
+      "texto_fuente": "Presión arterial: 123/93 mmHg",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0080": {
+      "ref": "SignosVitales#1116.Temperatura",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Temperatura: 38.7 °C",
+      "fecha": "2023-09-12",
+      "texto_fuente": "Temperatura: 38.7 °C",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0081": {
+      "ref": "SignosVitales#1116.Pulso",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Frecuencia cardiaca: 70 lpm",
+      "fecha": "2023-09-12",
+      "texto_fuente": "Frecuencia cardiaca: 70 lpm",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0082": {
+      "ref": "SignosVitales#1116.Frecuencia",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Frecuencia respiratoria: 24 rpm",
+      "fecha": "2023-09-12",
+      "texto_fuente": "Frecuencia respiratoria: 24 rpm",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0083": {
+      "ref": "SignosVitales#1116.SatO2",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Saturación de O2: 94 %",
+      "fecha": "2023-09-12",
+      "texto_fuente": "Saturación de O2: 94 %",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0084": {
+      "ref": "SignosVitales#1116.Peso",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Peso: 63.5 kg",
+      "fecha": "2023-09-12",
+      "texto_fuente": "Peso: 63.5 kg",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0085": {
+      "ref": "SignosVitales#1116.Talla",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Talla: 174 cm",
+      "fecha": "2023-09-12",
+      "texto_fuente": "Talla: 174 cm",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0086": {
+      "ref": "SignosVitales#1116.GlucemiaCapilar",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Glucosa capilar: 225 mg/dL",
+      "fecha": "2023-09-12",
+      "texto_fuente": "Glucosa capilar: 225 mg/dL",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0087": {
+      "ref": "SignosVitales#1116.PA_NoInvasiva1",
+      "refs_extra": [],
+      "tipo": "signo_vital",
+      "valor": "Presión arterial: 145/90 mmHg",
+      "fecha": "2023-09-12",
+      "texto_fuente": "Presión arterial: 145/90 mmHg",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    },
+    "H-0088": {
+      "ref": "historiaclinica#1023.TipoSangre",
+      "refs_extra": [],
+      "tipo": "tipo_sangre",
+      "valor": "B +",
+      "fecha": "2023-06-26",
+      "texto_fuente": "B +",
+      "certeza": "afirmado",
+      "expediente": "100021"
+    }
+  }
+}
